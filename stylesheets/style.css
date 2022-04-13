@@ -7,7 +7,6 @@ body {
 }
 /* Navigation elements */
 nav {
-  overflow: hidden;
   position: fixed;
 
   width: 100%;
@@ -21,19 +20,19 @@ nav {
 
   background-color: rgb(32, 28, 37);
 }
-/* Note: this will be used on every webpage */
+/* Note: this will be used on every webpage exactly once */
 #main-heading {
   width: 100%;
   top: 0;
-
   margin: 0;
   padding: 30px;
+
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 
   background-color: rgb(32, 28, 37);
-  color: white;
-  font-size: 30px;
-  font-weight: bolder;
 }
 ul {
   top: 80px;
@@ -46,18 +45,21 @@ ul {
 
   background-color: black;
 }
-#nav-links {
+.nav-links {
   float: left;
   display: block;
 
-  padding: 16px 16px;
+  padding: 16px 0px;
+  width: 25%;
+  text-align: center;
 
   color: white;
   text-decoration: none;
+
   border-radius: 10px;
 }
-#nav-links:hover,
-#nav-links:focus {
+.nav-links:hover,
+.nav-links:focus {
   color: black;
 
   background-color: white;
@@ -69,27 +71,29 @@ header {
   padding: 15px;
 
   text-align: center;
+  color: white;
 
   box-shadow: 2px 2px 5px black;
   border-radius: 10px;
 
   background-color: rgb(32, 28, 37);
-  color: white;
 }
 img {
+  margin: 10px, 10px;
   width: 100%;
   height: auto;
 
   box-shadow: 2px 2px 5px black;
-  margin: 10px, 10px;
   box-sizing: border-box;
 }
 footer {
   text-indent: 40px;
   color: white;
-  font-size: smaller;
 
   background-color: rgb(32, 28, 37);
+}
+footer p {
+  font-size: 14px;
 }
 section {
   padding: 10px;
@@ -101,10 +105,18 @@ section {
   background-color: white;
 }
 p {
+  margin: 18px;
+
   font-size: 18px;
-  margin: 10px;
   text-indent: 10px;
+  line-height: 1.6;
 }
-#align-side {
+.align-side {
   display: flex;
+}
+form {
+  padding: 1%;
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
 }

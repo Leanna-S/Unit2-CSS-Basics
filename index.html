@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
     <style>
-      input,
-      textarea {
+      .contact-us-input {
         padding: 12px 20px;
         margin: 8px 0;
 
@@ -18,34 +17,29 @@
         border-width: 1px;
         box-shadow: 2px 2px 5px black;
       }
-      input:focus,
-      textarea:focus {
+      .contact-us-input:hover {
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 10px;
+      }
+      .contact-us-input:focus {
         border-style: solid;
         border-color: black;
         border-radius: 10px;
 
         background-color: rgb(231, 227, 235);
       }
-      form {
-        padding: 1%;
-
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px black;
-      }
-      input[type="submit"] {
+      .contact-us-input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
         font-family: Georgia, "Times New Roman", Times, serif;
 
-        border-color: black;
         background-color: white;
       }
-      input:hover,
-      textarea:hover {
-        border-width: 2px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 10px;
+      .contact-us-input[type="submit"]:hover,
+      .contact-us-input[type="submit"]:focus {
+        background-color: rgb(231, 227, 235);
       }
     </style>
     <title>Leanna Szypowski - Portfolio</title>
@@ -55,27 +49,32 @@
     <nav>
       <h1 id="main-heading">Leanna Szypowski - Portfolio</h1>
       <ul>
-        <li><a href="index.html" id="nav-links">Home Page</a></li>
-        <li><a href="index.html" id="nav-links">Achievements</a></li>
-        <li><a href="index.html" id="nav-links">Sports and Activities</a></li>
-        <li><a href="index.html" id="nav-links">Work Portfolio</a></li>
+        <li><a href="index.html" class="nav-links">Home Page</a></li>
+        <li><a href="achievements.html" class="nav-links">Achievements</a></li>
+        <li>
+          <a href="sports-and-activities.html" class="nav-links"
+            >Sports and Activities</a
+          >
+        </li>
+        <li>
+          <a href="work-portfolio.html" class="nav-links">Work Portfolio</a>
+        </li>
       </ul>
     </nav>
     <main>
-      <section id="align-side">
+      <section class="align-side">
         <section>
           <header>
             <h2>About Leanna</h2>
           </header>
           <p>
             Born and raised in Winnipeg, Manitoba, Leanna Szypowski is a
-            hardworking and student. She goes to PTEC (Pembina Trails Early
-            College) and Shaftsbury High School, and is currently in grade 10.
-            She enjoys reading books, working with technology, and draws a lot
-            of digital art on her iPad in her free time. She is a great problem
-            solver and can do anything if she puts her mind to it. Her future
-            goals include learning more coding or design, and having fun a long
-            the way!
+            hardworking student. She goes to PTEC (Pembina Trails Early College)
+            and Shaftsbury High School, and is currently in grade 10. She enjoys
+            reading books, working with technology, and draws a lot of digital
+            art on her iPad in her free time. She is a great problem solver and
+            can do anything if she puts her mind to it. Her future goals include
+            learning more coding or design, and having fun a long the way!
           </p>
         </section>
         <section>
@@ -104,6 +103,7 @@
             id="fname-contact-us"
             name="fname-contact-us"
             required
+            class="contact-us-input"
           /><br /><br />
           <label for="lname-contact-us"
             ><b>Last name:</b> <em>*required</em></label
@@ -113,6 +113,7 @@
             id="lname-contact-us"
             name="lname-contact-us"
             required
+            class="contact-us-input"
           /><br /><br />
           <label for="email-contact-us"><b>Email:</b> <em>*required</em></label
           ><br />
@@ -121,6 +122,7 @@
             id="email-contact-us"
             name="email-contact-us"
             required
+            class="contact-us-input"
           /><br /><br />
           <label for="phone-contact-us"><b>Phone Number:</b></label
           ><br />
@@ -128,6 +130,7 @@
             type="tel"
             id="phone-contact-us"
             name="phone-contact-us"
+            class="contact-us-input"
           /><br /><br />
           <label for="message-contact-us"
             ><b>Message:</b> <em>*required</em></label
@@ -138,9 +141,14 @@
             rows="4"
             cols="50"
             required
+            class="contact-us-input"
           ></textarea
           ><br /><br />
-          <input type="submit" value="Submit Message" /><br />
+          <input
+            type="submit"
+            value="Submit Message"
+            class="contact-us-input"
+          /><br />
         </form>
       </section>
     </main>
