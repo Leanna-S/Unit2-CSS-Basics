@@ -9,34 +9,36 @@
       input,
       textarea {
         padding: 12px 20px;
-        width: 100%;
         margin: 8px 0;
+
+        box-sizing: border-box;
+        width: 100%;
+
         border-radius: 10px;
         border-width: 1px;
-        box-sizing: border-box;
         box-shadow: 2px 2px 5px black;
       }
       input:focus,
       textarea:focus {
         border-style: solid;
         border-color: black;
-        background-color: rgb(222, 231, 231);
         border-radius: 10px;
+
+        background-color: rgb(231, 227, 235);
       }
       form {
-        border-style: solid;
-        border-color: black;
         padding: 1%;
+
         border-radius: 10px;
         box-shadow: 2px 2px 5px black;
       }
       input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
-        background-color: rgb(222, 231, 231);
+        font-family: Georgia, "Times New Roman", Times, serif;
 
         border-color: black;
-        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: white;
       }
       input:hover,
       textarea:hover {
@@ -48,39 +50,40 @@
     </style>
     <title>Leanna Szypowski - Portfolio</title>
   </head>
+
   <body>
     <nav>
+      <h1 id="main-heading">Leanna Szypowski - Portfolio</h1>
       <ul>
         <li><a href="index.html" id="nav-links">Home Page</a></li>
-        <li><a href="index.html" id="nav-links">Credentials and Skills</a></li>
+        <li><a href="index.html" id="nav-links">Achievements</a></li>
         <li><a href="index.html" id="nav-links">Sports and Activities</a></li>
-        <li><a href="index.html" id="nav-links">Works Made</a></li>
+        <li><a href="index.html" id="nav-links">Work Portfolio</a></li>
       </ul>
     </nav>
     <main>
-      <section id="main-heading">
-        <header>
-          <h1>Leanna Szypowski - Portfolio</h1>
-        </header>
-      </section>
-      <section>
-        <header>
-          <h2>About Leanna</h2>
-        </header>
-        <p>
-          Born and raised in Winnipeg, Leanna Szypowski is a hardworking and
-          student. She goes to PTEC (Pembina Trails Early College) and
-          Shaftsbury high school, and is currently in grade 10. She enjoys
-          reading books, working wih technology, and draws a lot of digital art
-          on her iPad. She is a great problem solver and can do anything if she
-          puts her mind to it.
-        </p>
-      </section>
-      <section>
-        <img
-          src="images\image0.jpg"
-          alt="Picture of Leanna sitting and smiling at the camera, wearing a light grey sweater and legging with dirty blonde hair and blue glasses"
-        />
+      <section id="align-side">
+        <section>
+          <header>
+            <h2>About Leanna</h2>
+          </header>
+          <p>
+            Born and raised in Winnipeg, Manitoba, Leanna Szypowski is a
+            hardworking and student. She goes to PTEC (Pembina Trails Early
+            College) and Shaftsbury High School, and is currently in grade 10.
+            She enjoys reading books, working with technology, and draws a lot
+            of digital art on her iPad in her free time. She is a great problem
+            solver and can do anything if she puts her mind to it. Her future
+            goals include learning more coding or design, and having fun a long
+            the way!
+          </p>
+        </section>
+        <section>
+          <img
+            src="images\image0.jpg"
+            alt="Picture of Leanna sitting and smiling at the camera, wearing a light grey sweater and legging with dirty blonde hair and blue glasses"
+          />
+        </section>
       </section>
       <section>
         <header>
@@ -118,6 +121,13 @@
             id="email-contact-us"
             name="email-contact-us"
             required
+          /><br /><br />
+          <label for="phone-contact-us"><b>Phone Number:</b></label
+          ><br />
+          <input
+            type="tel"
+            id="phone-contact-us"
+            name="phone-contact-us"
           /><br /><br />
           <label for="message-contact-us"
             ><b>Message:</b> <em>*required</em></label
