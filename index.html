@@ -1,3 +1,10 @@
+<!--
+  Name: Leanna Szypowski
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: Pembina Trails Early College
+  Date Last Modified: 4/17/2022
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,23 +54,52 @@
 
   <body>
     <nav>
-      <h1 id="main-heading">Leanna Szypowski - Portfolio</h1>
-      <ul>
-        <li><a href="index.html" class="nav-links">Home Page</a></li>
-        <li><a href="achievements.html" class="nav-links">Achievements</a></li>
-        <li>
-          <a href="sports-and-activities.html" class="nav-links"
+      <h1 id="main-heading" aria-label="Navigation">
+        Leanna Szypowski - Portfolio
+      </h1>
+      <ul role="menubar">
+        <li role="none">
+          <a
+            href="index.html"
+            class="nav-links"
+            aria-label="Link to home page"
+            role="menuitem"
+            >Home Page</a
+          >
+        </li>
+        <li role="none">
+          <a
+            href="achievements.html"
+            class="nav-links"
+            aria-label="Link to achievements page"
+            role="menuitem"
+            >Achievements</a
+          >
+        </li>
+        <li role="none">
+          <a
+            href="sports-and-activities.html"
+            class="nav-links"
+            aria-label="Link to sports and activities page"
+            role="menuitem"
             >Sports and Activities</a
           >
         </li>
-        <li>
-          <a href="work-portfolio.html" class="nav-links">Work Portfolio</a>
+        <li role="none">
+          <a
+            href="work-portfolio.html"
+            class="nav-links"
+            aria-label="Link to work portfolio page"
+            role="menuitem"
+            >Work Portfolio</a
+          >
         </li>
       </ul>
     </nav>
-    <main>
-      <section class="align-side">
-        <section>
+
+    <main aria-label="Main content">
+      <section class="align-side" aria-label="Biography about Leanna">
+        <section aria-label="Written biography">
           <header>
             <h2>About Leanna</h2>
           </header>
@@ -77,14 +113,16 @@
             learning more coding or design, and having fun a long the way!
           </p>
         </section>
-        <section>
+
+        <section aria-label="Image of Leanna">
           <img
             src="images\image0.jpg"
             alt="Picture of Leanna sitting and smiling at the camera, wearing a light grey sweater and legging with dirty blonde hair and blue glasses"
           />
         </section>
       </section>
-      <section>
+
+      <section aria-label="Contact Leanna form">
         <header>
           <h2>Contact Leanna</h2>
         </header>
@@ -103,6 +141,7 @@
             id="fname-contact-us"
             name="fname-contact-us"
             required
+            aria-required="true"
             class="contact-us-input"
           /><br /><br />
           <label for="lname-contact-us"
@@ -113,6 +152,7 @@
             id="lname-contact-us"
             name="lname-contact-us"
             required
+            aria-required="true"
             class="contact-us-input"
           /><br /><br />
           <label for="email-contact-us"><b>Email:</b> <em>*required</em></label
@@ -122,6 +162,7 @@
             id="email-contact-us"
             name="email-contact-us"
             required
+            aria-required="true"
             class="contact-us-input"
           /><br /><br />
           <label for="phone-contact-us"><b>Phone Number:</b></label
@@ -141,6 +182,7 @@
             rows="4"
             cols="50"
             required
+            aria-required="true"
             class="contact-us-input"
           ></textarea
           ><br /><br />
@@ -152,7 +194,8 @@
         </form>
       </section>
     </main>
-    <footer>
+
+    <footer aria-label="Footer">
       <br />
       <p>Made by Leanna</p>
       <p>Email: leannaszypowski@gmail.com</p>
