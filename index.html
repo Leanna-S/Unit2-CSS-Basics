@@ -13,10 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
     <style>
+      /* Used it the contact us form*/
       .contact-us-input {
         padding: 12px 20px;
         margin: 8px 0;
-
+        /* Border box is to keep in in the section, without it, it stretches past */
         box-sizing: border-box;
         width: 100%;
 
@@ -24,6 +25,7 @@
         border-width: 1px;
         box-shadow: 2px 2px 5px black;
       }
+      /* Hover = mouse over button, focus = selected or clicked on, gives interactive feel */
       .contact-us-input:hover {
         border-width: 2px;
         border-style: solid;
@@ -37,6 +39,7 @@
 
         background-color: rgb(231, 227, 235);
       }
+      /* used for just the submit button, as it doesn't seem to affect the submit button if it isn't treated separately */
       .contact-us-input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
@@ -53,6 +56,7 @@
   </head>
 
   <body>
+    <!-- navigation, uses ul but with a lot of css, check css for more details-->
     <nav>
       <h1 id="main-heading" aria-label="Navigation">
         Leanna Szypowski - Portfolio
@@ -98,6 +102,8 @@
     </nav>
 
     <main aria-label="Main content">
+      <!-- note that the section below encapsulates two other sections so i could get a
+        side by side look, the other two sections are so it knows what two parts to sort-->
       <section class="align-side" aria-label="Biography about Leanna">
         <section aria-label="Written biography">
           <header>
@@ -122,19 +128,22 @@
         </section>
       </section>
 
+      <!-- contact us form -->
       <section aria-label="Contact Leanna form">
         <header>
           <h2>Contact Leanna</h2>
         </header>
         <p>
-          <em
+          <span class="italic"
             >*Don't post anything confidential, this is being used for a school
-            project</em
+            project</span
           >
         </p>
+        <!-- Actual contact us form, first and last name, phone, email and message-->
         <form>
           <label for="fname-contact-us"
-            ><b>First name:</b> <em>*required</em></label
+            ><span class="bold">First name:</span>
+            <span class="italic">*required</span></label
           ><br />
           <input
             type="text"
@@ -145,7 +154,8 @@
             class="contact-us-input"
           /><br /><br />
           <label for="lname-contact-us"
-            ><b>Last name:</b> <em>*required</em></label
+            ><span class="bold">Last name:</span>
+            <span class="italic">*required</span></label
           ><br />
           <input
             type="text"
@@ -155,7 +165,9 @@
             aria-required="true"
             class="contact-us-input"
           /><br /><br />
-          <label for="email-contact-us"><b>Email:</b> <em>*required</em></label
+          <label for="email-contact-us"
+            ><span class="bold">Email:</span>
+            <span class="italic">*required</span></label
           ><br />
           <input
             type="email"
@@ -165,7 +177,8 @@
             aria-required="true"
             class="contact-us-input"
           /><br /><br />
-          <label for="phone-contact-us"><b>Phone Number:</b></label
+          <label for="phone-contact-us"
+            ><span class="bold">Phone Number:</span></label
           ><br />
           <input
             type="tel"
@@ -174,7 +187,8 @@
             class="contact-us-input"
           /><br /><br />
           <label for="message-contact-us"
-            ><b>Message:</b> <em>*required</em></label
+            ><span class="bold">Message:</span>
+            <span class="italic">*required</span></label
           ><br />
           <textarea
             id="message-contact-us"
@@ -195,9 +209,10 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer aria-label="Footer">
       <br />
-      <p>Made by Leanna</p>
+      <p>&#169; Leanna Szypowski</p>
       <p>Email: leannaszypowski@gmail.com</p>
       <br />
     </footer>

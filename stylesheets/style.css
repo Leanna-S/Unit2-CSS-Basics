@@ -3,13 +3,16 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
+  /* margin is large so there is room for the menu at the top */
   margin-top: 180px;
 }
 /* Navigation elements */
 nav {
+  /* keeps it on top og the page, not affected by scrolling */
   position: fixed;
 
   width: 100%;
+  /* did you know that there is a margin for elements by default? because i didn't and it was a pain to figure out */
   margin: 0;
   padding: 0;
   top: 0;
@@ -34,6 +37,8 @@ nav {
 
   background-color: rgb(32, 28, 37);
 }
+
+/* Navigation styling*/
 ul {
   top: 80px;
   margin: 0;
@@ -46,10 +51,12 @@ ul {
   background-color: black;
 }
 .nav-links {
+  /* floats beside each element */
   float: left;
   display: block;
 
   padding: 16px 0px;
+  /* Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages*/
   width: 25%;
   text-align: center;
 
@@ -58,6 +65,7 @@ ul {
 
   border-radius: 10px;
 }
+/* Hover = mouse over button, focus = selected or clicked on, gives interactive feel */
 .nav-links:hover,
 .nav-links:focus {
   color: black;
@@ -72,12 +80,13 @@ header {
 
   text-align: center;
   color: white;
-
+  /* Box shadow is my new favourite border (2px by 2px with 5px of fading out)*/
   box-shadow: 2px 2px 5px black;
   border-radius: 10px;
 
   background-color: rgb(32, 28, 37);
 }
+
 img {
   margin: 10px, 10px;
   width: 100%;
@@ -112,6 +121,7 @@ p {
   line-height: 1.6;
 }
 .align-side {
+  /* allows the items to float side by side */
   display: flex;
 }
 form {
@@ -119,4 +129,11 @@ form {
 
   border-radius: 10px;
   box-shadow: 2px 2px 5px black;
+}
+
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
 }
