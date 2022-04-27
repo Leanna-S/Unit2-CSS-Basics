@@ -9,12 +9,14 @@ body {
   margin: 0;
   padding: 0;
   /* margin is large so there is room for the menu at the top */
-  margin-top: 180px;
+  margin-top: 190px;
 }
 /* Navigation elements */
 nav {
   /* keeps it on top og the page, not affected by scrolling */
   position: fixed;
+
+  z-index: 100;
 
   width: 100%;
   /* did you know that there is a margin for elements by default? because i didn't and it was a pain to figure out */
@@ -98,12 +100,15 @@ header {
 }
 
 img {
+  display: block;
+
   margin: 10px, 10px;
   width: 100%;
   height: auto;
 
   box-shadow: 2px 2px 5px black;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 footer {
   text-indent: 40px;
@@ -145,4 +150,39 @@ form {
 }
 .bold {
   font-weight: bold;
+}
+.nav-selected {
+  font-weight: bold;
+}
+
+figcaption {
+  color: black;
+  text-align: center;
+}
+.overlay-text {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+
+  z-index: 1;
+}
+.overlay-image {
+  z-index: 2;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.overlay-image:hover {
+  opacity: 0;
+  z-index: 0;
 }

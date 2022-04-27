@@ -43,7 +43,6 @@
       .contact-us-input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
-        font-family: Georgia, "Times New Roman", Times, serif;
 
         background-color: white;
       }
@@ -62,14 +61,15 @@
         Leanna Szypowski - Portfolio
       </h1>
       <ul role="menubar">
-        <li role="none">
+        <li role="none" class="nav-selected">
           <a
             href="index.html"
             class="nav-links"
             aria-label="Link to home page"
             role="menuitem"
-            >Home Page</a
           >
+            Home Page
+          </a>
         </li>
         <li role="none">
           <a
@@ -77,17 +77,19 @@
             class="nav-links"
             aria-label="Link to achievements page"
             role="menuitem"
-            >Achievements</a
           >
+            Achievements
+          </a>
         </li>
         <li role="none">
           <a
-            href="sports-and-activities.html"
+            href="resume.html"
             class="nav-links"
-            aria-label="Link to sports and activities page"
+            aria-label="Link to resume page"
             role="menuitem"
-            >Sports and Activities</a
           >
+            Resume
+          </a>
         </li>
         <li role="none">
           <a
@@ -95,8 +97,9 @@
             class="nav-links"
             aria-label="Link to work portfolio page"
             role="menuitem"
-            >Work Portfolio</a
           >
+            Work Portfolio
+          </a>
         </li>
       </ul>
     </nav>
@@ -133,11 +136,9 @@
         <header>
           <h2>Contact Leanna</h2>
         </header>
-        <p>
-          <span class="italic"
-            >*Don't post anything confidential, this is being used for a school
-            project</span
-          >
+        <p class="italic">
+          *Don't post anything confidential, this is being used for a school
+          project
         </p>
         <!-- Actual contact us form, first and last name, phone, email and message-->
         <form>
@@ -165,10 +166,11 @@
             aria-required="true"
             class="contact-us-input"
           /><br /><br />
-          <label for="email-contact-us"
-            ><span class="bold">Email:</span>
-            <span class="italic">*required</span></label
-          ><br />
+          <label for="email-contact-us">
+            <span class="bold">Email:</span>
+            <span class="italic">*required</span>
+          </label>
+          <br />
           <input
             type="email"
             id="email-contact-us"
@@ -176,20 +178,26 @@
             required
             aria-required="true"
             class="contact-us-input"
-          /><br /><br />
-          <label for="phone-contact-us"
-            ><span class="bold">Phone Number:</span></label
-          ><br />
+          />
+          <br />
+          <br />
+          <label for="phone-contact-us">
+            <span class="bold">Phone Number:</span>
+          </label>
+          <br />
           <input
             type="tel"
             id="phone-contact-us"
             name="phone-contact-us"
             class="contact-us-input"
-          /><br /><br />
-          <label for="message-contact-us"
-            ><span class="bold">Message:</span>
-            <span class="italic">*required</span></label
-          ><br />
+          />
+          <br />
+          <br />
+          <label for="message-contact-us">
+            <span class="bold">Message:</span>
+            <span class="italic">*required</span>
+          </label>
+          <br />
           <textarea
             id="message-contact-us"
             name="message-contact-us"
@@ -198,13 +206,15 @@
             required
             aria-required="true"
             class="contact-us-input"
-          ></textarea
-          ><br /><br />
+          ></textarea>
+          <br />
+          <br />
           <input
             type="submit"
             value="Submit Message"
             class="contact-us-input"
-          /><br />
+          />
+          <br />
         </form>
       </section>
     </main>
