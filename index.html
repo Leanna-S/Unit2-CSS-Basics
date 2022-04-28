@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 4/17/2022
+  Date Last Modified: 4/28/2022
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +13,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
     <style>
-      /* Used it the contact us form*/
+      /*
+      Used it the contact us form
+      */
       .contact-us-input {
+        /*
+        adds padding and margin
+        */
         padding: 12px 20px;
         margin: 8px 0;
-        /* Border box is to keep in in the section, without it, it stretches past */
+        /*
+        Border box is to keep in in the section, without it, it stretches past
+        */
         box-sizing: border-box;
+        /*
+        sets width to take up the full screen
+        */
         width: 100%;
+        font-size: 18px;
 
+        /*
+        rounds border and adds a border and shadow
+        */
         border-radius: 10px;
         border-width: 1px;
         box-shadow: 2px 2px 5px black;
       }
-      /* Hover = mouse over button, focus = selected or clicked on, gives interactive feel */
+      /*
+      Hover = mouse over button, focus = selected or clicked on, gives interactive feel
+      */
       .contact-us-input:hover {
+        /*
+        Thins border, sets type and color, and round the border
+        */
         border-width: 2px;
         border-style: solid;
         border-color: black;
@@ -37,18 +56,18 @@
         border-color: black;
         border-radius: 10px;
 
-        background-color: rgb(231, 227, 235);
+        background-color: rgb(234, 213, 230);
       }
       /* used for just the submit button, as it doesn't seem to affect the submit button if it isn't treated separately */
       .contact-us-input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
 
-        background-color: white;
+        background-color: #f9f9f9;
       }
       .contact-us-input[type="submit"]:hover,
       .contact-us-input[type="submit"]:focus {
-        background-color: rgb(231, 227, 235);
+        background-color: rgb(234, 213, 230);
       }
     </style>
     <title>Leanna Szypowski - Portfolio</title>
@@ -57,9 +76,11 @@
   <body>
     <!-- navigation, uses ul but with a lot of css, check css for more details-->
     <nav>
+      <!-- main heading at the very top -->
       <h1 id="main-heading" aria-label="Navigation">
         Leanna Szypowski - Portfolio
       </h1>
+      <!-- nav bar, aria and roles used to improve accessibility, class nav-links allows styling for just that -->
       <ul role="menubar">
         <li role="none" class="nav-selected">
           <a
@@ -106,7 +127,7 @@
 
     <main aria-label="Main content">
       <!-- note that the section below encapsulates two other sections so i could get a
-        side by side look, the other two sections are so it knows what two parts to sort-->
+        side by side look, the original section is using display:flex which splits the screen based sections or divs -->
       <section class="align-side" aria-label="Biography about Leanna">
         <section aria-label="Written biography">
           <header>
@@ -142,10 +163,11 @@
         </p>
         <!-- Actual contact us form, first and last name, phone, email and message-->
         <form>
-          <label for="fname-contact-us"
-            ><span class="bold">First name:</span>
-            <span class="italic">*required</span></label
-          ><br />
+          <label for="fname-contact-us">
+            <span class="bold">First name:</span>
+            <span class="italic">*required</span>
+          </label>
+          <br />
           <input
             type="text"
             id="fname-contact-us"
@@ -153,11 +175,15 @@
             required
             aria-required="true"
             class="contact-us-input"
-          /><br /><br />
-          <label for="lname-contact-us"
-            ><span class="bold">Last name:</span>
-            <span class="italic">*required</span></label
-          ><br />
+            placeholder="John"
+          />
+          <br />
+          <br />
+          <label for="lname-contact-us">
+            <span class="bold">Last name:</span>
+            <span class="italic">*required</span>
+          </label>
+          <br />
           <input
             type="text"
             id="lname-contact-us"
@@ -165,7 +191,10 @@
             required
             aria-required="true"
             class="contact-us-input"
-          /><br /><br />
+            placeholder="Doe"
+          />
+          <br />
+          <br />
           <label for="email-contact-us">
             <span class="bold">Email:</span>
             <span class="italic">*required</span>
@@ -178,6 +207,7 @@
             required
             aria-required="true"
             class="contact-us-input"
+            placeholder="example@email.com"
           />
           <br />
           <br />
@@ -190,6 +220,7 @@
             id="phone-contact-us"
             name="phone-contact-us"
             class="contact-us-input"
+            placeholder="555-789-1234"
           />
           <br />
           <br />
@@ -206,6 +237,7 @@
             required
             aria-required="true"
             class="contact-us-input"
+            placeholder="Write message here:"
           ></textarea>
           <br />
           <br />
@@ -222,8 +254,14 @@
     <!-- Footer -->
     <footer aria-label="Footer">
       <br />
-      <p>&#169; Leanna Szypowski</p>
-      <p>Email: leannaszypowski@gmail.com</p>
+      <p class="footer-copyright">&#169; Leanna Szypowski</p>
+      <a href="mailto:leannaszypowski@gmail.com" title="Link to Leanna's Email">
+        <img
+          src="images\mail-email-icon-big.png"
+          alt="Email icon which links to Leanna Szypowski's email"
+          class="footer-mail-icon"
+        />
+      </a>
       <br />
     </footer>
   </body>

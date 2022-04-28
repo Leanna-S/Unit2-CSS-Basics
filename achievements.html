@@ -1,3 +1,10 @@
+<!--
+  Name: Leanna Szypowski
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: Pembina Trails Early College
+  Date Last Modified: 4/28/2022
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +12,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
+    <style>
+      .overlay-text {
+        /*
+        Keeps the text exactly in line within the image
+        */
+        position: absolute;
+
+        /*
+        Centers the text and sets it in the middle of the image
+        */
+        top: 10%;
+        /*
+        Noted in Nav of style.css, z-index allows there to be a hierarchy of what
+        appears on top, the higher the number, the higher priority is is to be on the top
+        The text under the image is set to an index of 1, while the image is 2, setting
+        the image above the text, however when the image is hovered, the index of the image
+        is set to 0, and it loses opacity, allowing the text to appear above the image
+        */
+        z-index: 1;
+
+        /*sets font size*/
+        font-size: 20px;
+      }
+      .overlay-image {
+        /*
+        Allows the text to be on the image, and is relative to where it normally would be
+        */
+        position: relative;
+        /*
+        sets z-index to 2 so the image is OVER the text
+        */
+        z-index: 2;
+        /*
+        Makes the transitions easier wand smooth when hovering over the images
+        */
+        transition: 0.5s ease;
+      }
+
+      .overlay-image:hover,
+      .overlay-image:focus {
+        /* Sets the opacity when hovered, lowering it slowly in conjunction with the transition property above */
+        opacity: 0.2;
+        /*
+        sets z-index to 0 so that the text is OVER the image
+        */
+        z-index: 0;
+      }
+      .achievements-container {
+        /*
+        Allows the text to be on the image, and is relative to where it normally would be
+        */
+        position: relative;
+        /*
+        sets padding arond each 'achievement' container
+        */
+        padding: 10px;
+        /*
+        aligns text to center
+        */
+        text-align: center;
+      }
+    </style>
     <title>Achievements</title>
   </head>
   <body>
@@ -58,30 +127,18 @@
         <header>
           <h2>Achievements</h2>
         </header>
+        <p class="italic">
+          *Hover over or tab to the images for more information!
+        </p>
         <div class="align-side">
-          <div class="container">
+          <div class="achievements-container">
+            <!-- Tab index allows and block or section to be selectable. It allow the tab key to be used to display the info underneath -->
             <img
               class="overlay-image"
               src="images\20210517_122017.jpg"
               alt="Picture of Leanna Szypowski's 2019 Honour Role with Distinction certificate, given when exceeding a 90% average"
+              tabindex="0"
             />
-            <div class="overlay">
-              <p class="overlay-text">
-                Leanna has gotten honour role with distinction for 3 years and
-                is set to get the same in her grade 10 year. She strives for
-                excellence in all her classes and works hard to make her work
-                the best it can be. She helps others with their work and is
-                happy to give her assistance.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img
-              class="overlay-image"
-              src="images\20210517_122036.jpg"
-              alt="Picture of Leanna Szypowski's 2018 Beaver Computing Challenge Distinction certificate, given when having a score in the top 25%"
-            />
-            <div class="overlay"></div>
             <p class="overlay-text">
               Leanna has gotten honour role with distinction for 3 years and is
               set to get the same in her grade 10 year. She strives for
@@ -89,31 +146,66 @@
               best it can be. She helps others with their work and is happy to
               give her assistance.
             </p>
-            </div>
+          </div>
+          <div class="achievements-container">
+            <img
+              class="overlay-image"
+              src="images\20210517_122036.jpg"
+              alt="Picture of Leanna Szypowski's 2018 Beaver Computing Challenge Distinction certificate, given when having a score in the top 25%"
+              tabindex="0"
+            />
+            <p class="overlay-text">
+              Leanna has competed in the Beaver Computing contest multiple
+              times. She enjoys the challenge the competition provides and loves
+              solving the problems given.
+            </p>
           </div>
         </div>
         <div class="align-side">
-          <figure class="overlay-image">
+          <div class="achievements-container">
+            <!-- each image goes above the text which is always there, but is hidden -->
             <img
+              class="overlay-image"
               src="images\20210517_122115.jpg"
               alt="Picture of Leanna Szypowski's 2018 Black Belt certificate for gaining the rank Shodan-ho in Meibukan Gojyu Karate"
+              tabindex="0"
             />
-            <figcaption>
-              Leanna Szypowski's 2018 Black Belt certificate for gaining the
-              rank Shodan-ho
-            </figcaption>
-          </figure>
-          <figure class="overlay-image">
+            <p class="overlay-text">
+              Leanna started karate she was 5. She worked hard and earned he
+              black belt after performing kata and showcasing her skills. She
+              was happy to receive her black belt after almost 10 years of hard
+              work and dedication.
+            </p>
+          </div>
+          <div class="achievements-container">
             <img
+              class="overlay-image"
               src="images\20210517_122137.jpg"
               alt="Picture of Leanna Szypowski's 2018 Basics for Babysitters course certificate"
+              tabindex="0"
             />
-            <figcaption>
-              Leanna Szypowski's 2019 Basics for Babysitters course certificate
-            </figcaption>
-          </figure>
+            <p class="overlay-text">
+              Leanna completed the basics for babysitter training course to
+              allow her to learn to care for young children properly. She takes
+              care of her nephews and thought that the course solidified her
+              knowledge.
+            </p>
+          </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer aria-label="Footer">
+      <br />
+      <p class="footer-copyright">&#169; Leanna Szypowski</p>
+      <a href="mailto:leannaszypowski@gmail.com" title="Link to Leanna's Email">
+        <img
+          src="images\mail-email-icon-big.png"
+          alt="Email icon which links to Leanna Szypowski's email"
+          class="footer-mail-icon"
+        />
+      </a>
+      <br />
+    </footer>
   </body>
 </html>

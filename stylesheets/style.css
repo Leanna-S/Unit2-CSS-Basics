@@ -1,188 +1,344 @@
+/*
+Color chosen: blue
+Why: Blue represents calmness, serenity, secure, and orderly.
+Blue is often seen as a sign of stability and reliability which
+is perfect for a portfolio because it shows I can be relied on
+*/
 * {
+  /*
+  Sets line height to the recommended height
+  */
   line-height: 140%;
+  /*
+  sets font family
+  */
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
-  background-color: rgb(231, 227, 235);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  /*
+  removes margin and padding
+  */
   margin: 0;
   padding: 0;
-  /* margin is large so there is room for the menu at the top */
+  /*
+  margin is large so there is room for the menu at the top
+  */
   margin-top: 190px;
+
+  /*
+  sets background color
+  */
+  background-color: rgb(234, 213, 230);
 }
-/* Navigation elements */
+
+/*
+Navigation elements
+*/
 nav {
-  /* keeps it on top og the page, not affected by scrolling */
+  /*
+  keeps it on top og the page, not affected by scrolling
+  */
   position: fixed;
 
+  /*
+  This prioritizes what content is on top of other content.
+  it is set to 100 so the navigation is above everything and that
+  some of my other positioned things are not on top of it. This is
+  also how i managed to get the text under the images in the
+  achievements page to work (see internal CSS on that page for more details
+  */
   z-index: 100;
 
+  /*
+  Sets width to 100 % to take up the full width
+  */
   width: 100%;
-  /* did you know that there is a margin for elements by default? because i didn't and it was a pain to figure out */
+  /*
+  did you know that there is a margin for elements by default? because i didn't and it was a pain to figure out -
+  sets margin and padding, along with letting the nave be flush to the top
+  */
   margin: 0;
   padding: 0;
   top: 0;
 
-  color: white;
+  /*
+  sets text color
+  */
+  color: #f9f9f9;
 
-  box-shadow: 5px 5px 8px black;
+  /*
+  Sets shadow
+  */
+  box-shadow: 5px 5px 8px rgb(28, 28, 37);
 
-  background-color: rgb(32, 28, 37);
+  /*
+  sets background color
+  */
+  background-color: rgb(28, 28, 37);
 }
-/* Note: this will be used on every webpage exactly once */
+/*
+Note: this will be used on every webpage exactly once
+*/
 #main-heading {
+  /*
+  sets width, keeps it flush to the top. and sets margin and padding
+  */
   width: 100%;
   top: 0;
   margin: 0;
   padding: 30px;
 
+  /*
+  aligns text
+  */
   text-align: center;
+  /*
+  sets font size and bolds the text
+  */
   font-size: 48px;
   font-weight: bold;
-  color: white;
+  /*
+  sets text color
+  */
+  color: #f9f9f9;
 
-  background-color: rgb(32, 28, 37);
+  /*
+  sets background color
+  */
+  background-color: rgb(28, 28, 37);
 }
 
-/* Navigation styling*/
+/*
+Navigation styling
+*/
 ul {
-  /* Adds margins and stretches border of ul across screen */
+  /*
+  Adds margins and stretches border of ul across screen
+  */
   top: 80px;
   margin: 0;
   padding: 0;
   width: 100%;
-  /* removes all additional default additions off the list (color, underline, etc.) */
-  list-style-type: none;
-  /* Adds a line between the main heading and the nav elements  */
-  border-top: 2px solid white;
 
-  background-color: black;
+  /*
+  removes all additional default additions off the list (color, underline, etc.)
+  */
+  list-style-type: none;
+
+  /*
+  Adds a line between the main heading and the nav elements
+  */
+  border-top: 2px solid #f9f9f9;
+
+  /* sets background color */
+  background-color: rgb(28, 28, 37);
 }
 .nav-links {
-  /* floats beside each element */
+  /*
+  floats beside each element
+  */
   float: left;
+  /*
+  Sets display to block to add more distinct sections and to have it create a new line and take up the whole width
+  */
   display: block;
 
+  /*
+  sets padding
+  */
   padding: 16px 0px;
-  /* Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages*/
+  /*
+  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+  */
   width: 25%;
+  /*
+  aligns text to center
+  */
   text-align: center;
 
-  color: white;
-  /* removes all additional decoration */
+  color: #f9f9f9;
+  /*
+  removes all additional decoration on the text
+  */
   text-decoration: none;
-
-  /* Rounds border */
+  /*
+  sets font size
+  */
+  font-size: 18px;
+  /*
+  adds transition affect to nav elements
+  */
+  transition: 0.3s ease;
+  /*
+  Rounds border
+  */
   border-radius: 10px;
 }
-/* Hover = mouse over button, focus = selected or clicked on, gives interactive feel */
+/*
+Hover = mouse over button, focus = selected or clicked on, gives interactive feel
+*/
 .nav-links:hover,
 .nav-links:focus {
-  color: black;
+  /*
+  changes color when hovered, or 'focused' (clicked or tabbed)
+  */
+  color: rgb(28, 28, 37);
 
-  background-color: white;
+  background-color: #f9f9f9;
 }
-
+/*
+Bolds text in nav of the page you're on
+*/
+.nav-selected {
+  font-weight: bold;
+}
 header {
+  /*
+  Adds margins and padding to header
+  */
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 15px;
-  font-size: 24px;
 
+  /*
+  Sets font size, aligns text to center, and sets the text color to #f9f9f9
+  */
+  font-size: 24px;
   text-align: center;
-  color: white;
-  /* Box shadow is my new favourite border (2px by 2px with 5px of fading out)*/
-  box-shadow: 2px 2px 5px black;
+  color: #f9f9f9;
+
+  /*
+  Box shadow is my new favourite border (2px by 2px with 5px of fading out)
+  */
+  box-shadow: 2px 2px 5px rgb(28, 28, 37);
   border-radius: 10px;
 
-  background-color: rgb(32, 28, 37);
+  /*
+  Sets background color
+  */
+  background-color: rgb(28, 28, 37);
 }
 
 img {
+  /*
+  Sets display to block to make it a distinct section
+  */
   display: block;
+  /*
+  Sizes the image to STAY in the section or 'box' it is in. Without it, it can cause the image to go out of bounds
+  */
+  box-sizing: border-box;
 
+  /*
+  Sets margin
+  */
   margin: 10px, 10px;
+
+  /*
+  Allows the width to take 100% of the section, while the auto on the height allows it to auto resize
+  */
   width: 100%;
   height: auto;
 
-  box-shadow: 2px 2px 5px black;
-  box-sizing: border-box;
+  /*
+  Adds shadow and curve to border
+  */
+  box-shadow: 2px 2px 5px rgb(28, 28, 37);
   border-radius: 10px;
 }
 footer {
+  /*
+  Indents text and sets the color to #f9f9f9
+  */
   text-indent: 40px;
-  color: white;
+  color: #f9f9f9;
 
-  background-color: rgb(32, 28, 37);
+  /*
+  sets background color
+  */
+  background-color: rgb(28, 28, 37);
 }
+
 footer p {
+  /*
+  Sets the font size of the text in the footer
+  */
   font-size: 14px;
 }
+.footer-mail-icon {
+  width: 3%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  margin-left: 30px;
+}
+.footer-copyright {
+  text-align: right;
+  margin-right: 50px;
+  float: right;
+}
+/*
+Note: this can be helpful to both separate sections and bring them together (see the home page biography and image)
+*/
 section {
+  /*
+  Adds margin and padding to each section
+  */
   padding: 10px;
   margin: 1%;
 
+  /*
+  Adds a shadow and curves the border
+  */
   box-shadow: 5px 5px 8px;
   border-radius: 10px;
 
-  background-color: white;
+  /*
+  Sets background color
+  */
+  background-color: #f9f9f9;
 }
+
 p {
+  /*
+  Sets margin
+  */
   margin: 18px;
 
+  /*
+  Sets font size and indent
+  */
   font-size: 18px;
   text-indent: 10px;
 }
+
 .align-side {
-  /* allows the items to float side by side */
+  /*
+  allows the items to float side by side by breaking the sections by either divs or sections
+  */
   display: flex;
 }
+
 form {
+  /*
+  Sets padding to the form
+  */
   padding: 1%;
 
+  /*
+  Adds shadow and round the borders
+  */
   border-radius: 10px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px rgb(28, 28, 37);
 }
 
+/*
+Used to set text as italics or bold respectively
+*/
 .italic {
   font-style: italic;
 }
 .bold {
   font-weight: bold;
-}
-.nav-selected {
-  font-weight: bold;
-}
-
-figcaption {
-  color: black;
-  text-align: center;
-}
-.overlay-text {
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-
-  z-index: 1;
-}
-.overlay-image {
-  z-index: 2;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-}
-.overlay-image:hover {
-  opacity: 0;
-  z-index: 0;
 }
