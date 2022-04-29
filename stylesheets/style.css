@@ -3,6 +3,7 @@ Color chosen: blue
 Why: Blue represents calmness, serenity, secure, and orderly.
 Blue is often seen as a sign of stability and reliability which
 is perfect for a portfolio because it shows I can be relied on
+and that i am level headed
 */
 * {
   /*
@@ -10,7 +11,7 @@ is perfect for a portfolio because it shows I can be relied on
   */
   line-height: 140%;
   /*
-  sets font family
+  sets font family, serif more professional and it think it fits the tone  of the website well
   */
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -29,7 +30,7 @@ body {
   /*
   sets background color
   */
-  background-color: rgb(234, 213, 230);
+  background-color: #bfbfcf;
 }
 
 /*
@@ -183,12 +184,12 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   /*
   changes color when hovered, or 'focused' (clicked or tabbed)
   */
-  color: rgb(28, 28, 37);
+  color: #f9f9f9;
 
-  background-color: #f9f9f9;
+  background-color: #323242;
 }
 /*
-Bolds text in nav of the page you're on
+Bolds text link text in nav of the page you're one, subtle
 */
 .nav-selected {
   font-weight: bold;
@@ -266,17 +267,36 @@ footer p {
   */
   font-size: 14px;
 }
+
 .footer-mail-icon {
-  width: 3%;
+  /*
+  adds auto resizing
+  */
+  width: 3.5%;
   height: auto;
+  /*
+  sets margin
+  */
+  margin-left: 30px;
+  /*
+  no border, no shadow
+  */
   border: none;
   box-shadow: none;
-  margin-left: 30px;
 }
 .footer-copyright {
-  text-align: right;
-  margin-right: 50px;
+  /*
+  floats the copy right, allows mail icon to be on the same line
+  */
   float: right;
+  /*
+  sets margin, brings it away from the right wall
+  */
+  margin-right: 50px;
+  /*
+  aligns the copyright to the left
+  */
+  text-align: right;
 }
 /*
 Note: this can be helpful to both separate sections and bring them together (see the home page biography and image)
