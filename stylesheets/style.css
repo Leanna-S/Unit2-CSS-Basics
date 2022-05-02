@@ -4,12 +4,29 @@ Why: Blue represents calmness, serenity, secure, and orderly.
 Blue is often seen as a sign of stability and reliability which
 is perfect for a portfolio because it shows I can be relied on
 and that i am level headed
+
+The desaturation adds a more serious tone. As a portfolio, i
+want to come across as professional and trustworthy
+
+I also used a more monochromatic color theme. It has analogous
+colors as well, (take the light purple background and the blue tinted black)
+although i didn't want to go super crazy with the colors, using the off-black on
+white and the white on off-black for the main colors and contrast. A lighter
+version of the off-black is used when an item is interactive (the Nav) and adds
+a more subtle difference in color
+
+lighter theme is used as you probably wont be on the website for long and it can
+have a lot of writing in the descriptions
 */
 * {
   /*
   Sets line height to the recommended height
   */
   line-height: 140%;
+  /*
+  adds spacing between letters
+  */
+  letter-spacing: 1.2px;
   /*
   sets font family, serif more professional and it think it fits the tone  of the website well
   */
@@ -97,12 +114,12 @@ Note: this will be used on every webpage exactly once
   /*
   sets font size and bolds the text
   */
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bold;
   /*
   sets text color
   */
-  color: #f9f9f9;
+  color: #9fdfff;
 
   /*
   sets background color
@@ -131,9 +148,6 @@ ul {
   Adds a line between the main heading and the nav elements
   */
   border-top: 2px solid #f9f9f9;
-
-  /* sets background color */
-  background-color: rgb(28, 28, 37);
 }
 .nav-links {
   /*
@@ -159,6 +173,7 @@ ul {
   text-align: center;
 
   color: #f9f9f9;
+  background-color: rgb(28, 28, 37);
   /*
   removes all additional decoration on the text
   */
@@ -184,7 +199,7 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   /*
   changes color when hovered, or 'focused' (clicked or tabbed)
   */
-  color: #f9f9f9;
+  color: #c8edff;
 
   background-color: #323242;
 }
@@ -203,11 +218,11 @@ header {
   padding: 15px;
 
   /*
-  Sets font size, aligns text to center, and sets the text color to #f9f9f9
+  Sets font size, aligns text to center, and sets the text color
   */
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
-  color: #f9f9f9;
+  color: #9fdfff;
 
   /*
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
@@ -272,7 +287,7 @@ footer p {
   /*
   adds auto resizing
   */
-  width: 3.5%;
+  width: 40px;
   height: auto;
   /*
   sets margin
