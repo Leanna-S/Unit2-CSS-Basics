@@ -26,7 +26,7 @@ have a lot of writing in the descriptions
   /*
   adds spacing between letters
   */
-  letter-spacing: 1.2px;
+  letter-spacing: 0.9px;
   /*
   sets font family, serif more professional and it think it fits the tone  of the website well
   */
@@ -42,7 +42,7 @@ body {
   /*
   margin is large so there is room for the menu at the top
   */
-  margin-top: 190px;
+  margin-top: 240px;
 
   /*
   sets background color
@@ -126,7 +126,21 @@ Note: this will be used on every webpage exactly once
   */
   background-color: rgb(28, 28, 37);
 }
-
+#logo {
+  /*
+  sets width of logo
+  */
+  width: 100px;
+  /*
+  allows the logo to be over the header
+  */
+  position: absolute;
+  /*
+  sets padding and margin
+  */
+  padding: 10px;
+  margin: 18px 18px;
+}
 /*
 Navigation styling
 */
@@ -203,11 +217,12 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
 
   background-color: #323242;
 }
-/*
-Bolds text link text in nav of the page you're one, subtle
-*/
-.nav-selected {
-  font-weight: bold;
+.nav-selected a {
+  /*
+  Underlines text of selected menu, and sets color to a more prominent blue
+  */
+  text-decoration: underline;
+  color: #c8edff;
 }
 header {
   /*
@@ -321,7 +336,7 @@ section {
   Adds margin and padding to each section
   */
   padding: 10px;
-  margin: 1%;
+  margin: 2%;
 
   /*
   Adds a shadow and curves the border

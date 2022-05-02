@@ -5,22 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
-    <title>Sports and Activities</title>
+    <title>Resume</title>
   </head>
   <body>
     <nav>
+      <!-- logo image set beside the header -->
+      <img
+        src="images\Picture1.png"
+        alt="picture of a blue rose cartoon drawing which is the logo"
+        id="logo"
+      />
       <h1 id="main-heading">Leanna Szypowski - Portfolio</h1>
-      <ul>
-        <li><a href="index.html" class="nav-links">Home Page</a></li>
-        <li><a href="achievements.html" class="nav-links">Achievements</a></li>
-        <li>
-          <a href="resume.html" class="nav-links">Resume</a>
+      <ul role="menubar">
+        <li role="none">
+          <a
+            href="index.html"
+            class="nav-links"
+            aria-label="Link to home page"
+            role="menuitem"
+          >
+            Home Page
+          </a>
         </li>
-        <li>
-          <a href="work-portfolio.html" class="nav-links">Work Portfolio</a>
+        <li role="none">
+          <a
+            href="achievements.html"
+            class="nav-links"
+            aria-label="Link to achievements page"
+            role="menuitem"
+          >
+            Achievements
+          </a>
+        </li>
+        <li role="none" class="nav-selected">
+          <a
+            href="resume.html"
+            class="nav-links"
+            aria-label="Link to resume page"
+            role="menuitem"
+          >
+            Resume
+          </a>
+        </li>
+        <li role="none">
+          <a
+            href="work-portfolio.html"
+            class="nav-links"
+            aria-label="Link to work portfolio page"
+            role="menuitem"
+          >
+            Work Portfolio
+          </a>
         </li>
       </ul>
     </nav>
     <main></main>
+
+    <!-- Footer -->
+    <footer aria-label="Footer">
+      <br />
+      <p class="footer-copyright">&#169; Leanna Szypowski</p>
+      <a href="mailto:leannaszypowski@gmail.com" title="Link to Leanna's Email">
+        <img
+          src="images\mail-email-icon-big.png"
+          alt="Email icon which links to Leanna Szypowski's email"
+          class="footer-mail-icon"
+        />
+      </a>
+      <br />
+    </footer>
   </body>
 </html>
