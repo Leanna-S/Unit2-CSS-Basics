@@ -31,6 +31,10 @@ have a lot of writing in the descriptions
   sets font family, serif more professional and it think it fits the tone  of the website well
   */
   font-family: Georgia, "Times New Roman", Times, serif;
+  /*
+  keeps everything in its appropriate box
+  */
+  box-sizing: border-box;
 }
 
 body {
@@ -39,10 +43,6 @@ body {
   */
   margin: 0;
   padding: 0;
-  /*
-  margin is large so there is room for the menu at the top
-  */
-  margin-top: 240px;
 
   /*
   sets background color
@@ -55,10 +55,9 @@ Navigation elements
 */
 nav {
   /*
-  keeps it on top og the page, not affected by scrolling
+  keeps nav fixed at the top
   */
   position: fixed;
-
   /*
   This prioritizes what content is on top of other content.
   it is set to 100 so the navigation is above everything and that
@@ -163,6 +162,33 @@ ul {
   */
   border-top: 2px solid #f9f9f9;
 }
+/*
+Adds resizing at smaller sizes
+*/
+@media (min-width: 900px) {
+  .nav-links {
+    /*
+  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+  */
+    width: 25%;
+  }
+}
+@media (max-width: 899px) {
+  .nav-links {
+    /*
+  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+  */
+    width: 50%;
+  }
+}
+@media (max-width: 599px) {
+  .nav-links {
+    /*
+  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+  */
+    width: 100%;
+  }
+}
 .nav-links {
   /*
   floats beside each element
@@ -177,10 +203,7 @@ ul {
   sets padding
   */
   padding: 16px 0px;
-  /*
-  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
-  */
-  width: 25%;
+
   /*
   aligns text to center
   */
@@ -205,6 +228,7 @@ ul {
   */
   border-radius: 10px;
 }
+
 /*
 Hover = mouse over button, focus = selected or clicked on, gives interactive feel
 */
@@ -224,7 +248,13 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   text-decoration: underline;
   color: #c8edff;
 }
-header {
+main {
+  /*
+  margin is large so there is room for the menu at the top
+  */
+  margin-top: 240px;
+}
+.page-header {
   /*
   Adds margins and padding to header
   */
@@ -378,12 +408,13 @@ p {
   font-size: 18px;
   text-indent: 10px;
 }
-
-.align-side {
-  /*
-  allows the items to float side by side by breaking the sections by either divs or sections
-  */
-  display: flex;
+@media (min-width: 900px) {
+  .align-side {
+    /*
+    allows the items to float side by side by breaking the sections by either divs or sections
+    */
+    display: flex;
+  }
 }
 
 form {
