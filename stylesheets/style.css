@@ -53,11 +53,11 @@ body {
 /*
 Navigation elements
 */
+
 nav {
-  /*
-  keeps nav fixed at the top
-  */
-  position: fixed;
+  position: sticky;
+  top: 0;
+
   /*
   This prioritizes what content is on top of other content.
   it is set to 100 so the navigation is above everything and that
@@ -66,18 +66,6 @@ nav {
   achievements page to work (see internal CSS on that page for more details
   */
   z-index: 100;
-
-  /*
-  Sets width to 100 % to take up the full width
-  */
-  width: 100%;
-  /*
-  did you know that there is a margin for elements by default? because i didn't and it was a pain to figure out -
-  sets margin and padding, along with letting the nave be flush to the top
-  */
-  margin: 0;
-  padding: 0;
-  top: 0;
 
   /*
   sets text color
@@ -147,10 +135,8 @@ ul {
   /*
   Adds margins and stretches border of ul across screen
   */
-  top: 80px;
   margin: 0;
   padding: 0;
-  width: 100%;
 
   /*
   removes all additional default additions off the list (color, underline, etc.)
@@ -194,10 +180,6 @@ Adds resizing at smaller sizes
   floats beside each element
   */
   float: left;
-  /*
-  Sets display to block to add more distinct sections and to have it create a new line and take up the whole width
-  */
-  display: block;
 
   /*
   sets padding
@@ -252,7 +234,7 @@ main {
   /*
   margin is large so there is room for the menu at the top
   */
-  margin-top: 240px;
+  margin-top: 50px;
 }
 .page-header {
   /*
