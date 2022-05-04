@@ -66,21 +66,6 @@ nav {
   achievements page to work (see internal CSS on that page for more details
   */
   z-index: 100;
-
-  /*
-  sets text color
-  */
-  color: #f9f9f9;
-
-  /*
-  Sets shadow
-  */
-  box-shadow: 5px 5px 8px rgb(28, 28, 37);
-
-  /*
-  sets background color
-  */
-  background-color: rgb(28, 28, 37);
 }
 /*
 Note: this will be used on every webpage exactly once
@@ -92,26 +77,28 @@ Note: this will be used on every webpage exactly once
   width: 100%;
   top: 0;
   margin: 0;
-  padding: 30px;
-
+  padding: 10px;
   /*
   aligns text
   */
   text-align: center;
-  /*
-  sets font size and bolds the text
-  */
-  font-size: 60px;
-  font-weight: bold;
-  /*
-  sets text color
-  */
-  color: #9fdfff;
 
   /*
   sets background color
   */
   background-color: rgb(28, 28, 37);
+}
+#main-heading h1 {
+  padding: 0 150px;
+  /*
+  sets font size and bolds the text
+  */
+  font-size: 48px;
+  font-weight: bold;
+  /*
+  sets text color
+  */
+  color: #9fdfff;
 }
 #logo {
   /*
@@ -206,9 +193,9 @@ Adds resizing at smaller sizes
   */
   transition: 0.3s ease;
   /*
-  Rounds border
+  Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
-  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(28, 28, 37);
 }
 
 /*
@@ -234,7 +221,7 @@ main {
   /*
   margin is large so there is room for the menu at the top
   */
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .page-header {
   /*
@@ -255,7 +242,6 @@ main {
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
   box-shadow: 2px 2px 5px rgb(28, 28, 37);
-  border-radius: 10px;
 
   /*
   Sets background color
