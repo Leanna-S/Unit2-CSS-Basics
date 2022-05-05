@@ -32,7 +32,7 @@ have a lot of writing in the descriptions
   */
   font-family: Georgia, "Times New Roman", Times, serif;
   /*
-  keeps everything in its appropriate box
+  keeps everything in its appropriate box, some elements could stretch farther then they wer supposed to
   */
   box-sizing: border-box;
 }
@@ -250,10 +250,6 @@ img {
   Sets display to block to make it a distinct section
   */
   display: block;
-  /*
-  Sizes the image to STAY in the section or 'box' it is in. Without it, it can cause the image to go out of bounds
-  */
-  box-sizing: border-box;
 
   /*
   Sets margin
