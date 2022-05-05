@@ -118,6 +118,8 @@ Note: this will be used on every webpage exactly once
   */
   padding: 5px;
   margin: 12px 12px;
+  border-radius: 0;
+  box-shadow: none;
 }
 /*
 Navigation styling
