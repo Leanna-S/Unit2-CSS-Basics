@@ -89,7 +89,7 @@ Note: this will be used on every webpage exactly once
   background-color: rgb(28, 28, 37);
 }
 #main-heading h1 {
-  padding: 0 150px;
+  padding: 0 150px 0 150px;
   /*
   sets font size and bolds the text
   */
@@ -112,8 +112,8 @@ Note: this will be used on every webpage exactly once
   /*
   sets padding and margin
   */
-  padding: 10px;
-  margin: 18px 18px;
+  padding: 5px;
+  margin: 12px 12px;
 }
 /*
 Navigation styling
@@ -136,7 +136,7 @@ ul {
   border-top: 2px solid #f9f9f9;
 }
 /*
-Adds resizing at smaller sizes
+Adds resizing at smaller sizes, so menu doesn't get mega squished
 */
 @media (min-width: 900px) {
   .nav-links {
@@ -144,6 +144,22 @@ Adds resizing at smaller sizes
   Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
   */
     width: 25%;
+  }
+  main {
+    /*
+  margin is large so there is room for the menu at the top
+  */
+    margin-top: 100px;
+  }
+  /*
+turns on align-side when screen size is big enough for it to look good
+*/
+
+  .align-side {
+    /*
+    allows the items to float side by side by breaking the sections by either divs or sections
+    */
+    display: flex;
   }
 }
 @media (max-width: 899px) {
@@ -153,6 +169,12 @@ Adds resizing at smaller sizes
   */
     width: 50%;
   }
+  main {
+    /*
+  margin is large so there is room for the menu at the top
+  */
+    margin-top: 150px;
+  }
 }
 @media (max-width: 599px) {
   .nav-links {
@@ -161,7 +183,38 @@ Adds resizing at smaller sizes
   */
     width: 100%;
   }
+  main {
+    /*
+  margin is large so there is room for the menu at the top
+  */
+    margin-top: 250px;
+  }
+  #hamburger-menu-icon:not(:focus) ~ ul {
+    visibility: hidden;
+  }
+  #hamburger-menu-icon:focus {
+    background-color: #323242;
+  }
+  #main-heading {
+    box-shadow: 5px 5px 8px rgb(28, 28, 37);
+    border-bottom: 2px solid #f9f9f9;
+  }
 }
+@media (min-width: 600px) {
+  #hamburger-menu-icon {
+    display: none;
+  }
+}
+#hamburger-menu-icon {
+  /*
+  sets width of logo
+  */
+  width: 80px;
+  background-color: rgb(28, 28, 37);
+  position: absolute;
+  border-radius: 0px 0px 10px 10px;
+}
+
 .nav-links {
   /*
   floats beside each element
@@ -217,12 +270,7 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   text-decoration: underline;
   color: #c8edff;
 }
-main {
-  /*
-  margin is large so there is room for the menu at the top
-  */
-  margin-top: 80px;
-}
+
 .page-header {
   /*
   Adds margins and padding to header
@@ -242,6 +290,7 @@ main {
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
   box-shadow: 2px 2px 5px rgb(28, 28, 37);
+  border-radius: 10px;
 
   /*
   Sets background color
@@ -312,6 +361,7 @@ footer p {
   border: none;
   box-shadow: none;
 }
+
 .footer-copyright {
   /*
   floats the copy right, allows mail icon to be on the same line
@@ -375,14 +425,6 @@ p {
   */
   font-size: 18px;
   text-indent: 10px;
-}
-@media (min-width: 900px) {
-  .align-side {
-    /*
-    allows the items to float side by side by breaking the sections by either divs or sections
-    */
-    display: flex;
-  }
 }
 
 form {
