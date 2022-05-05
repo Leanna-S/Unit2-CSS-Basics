@@ -87,6 +87,10 @@ Note: this will be used on every webpage exactly once
   sets background color
   */
   background-color: rgb(28, 28, 37);
+  /*
+  adds border on the bottom
+  */
+  border-bottom: 2px solid #f9f9f9;
 }
 #main-heading h1 {
   padding: 0 150px 0 150px;
@@ -129,11 +133,6 @@ ul {
   removes all additional default additions off the list (color, underline, etc.)
   */
   list-style-type: none;
-
-  /*
-  Adds a line between the main heading and the nav elements
-  */
-  border-top: 2px solid #f9f9f9;
 }
 /*
 Adds resizing at smaller sizes, so menu doesn't get mega squished
@@ -183,35 +182,63 @@ turns on align-side when screen size is big enough for it to look good
   */
     width: 100%;
   }
-  main {
-    /*
-  margin is large so there is room for the menu at the top
+
+  /*
+  Okay, so what this code basically does is when you are NOT focused (read clicked) on the burger menu,
+  the ul (nav) is not visible. Therefore when you are focused on the burger menu, the ul (nav) element appears once again
+
+  The ~ means that when the burger icon is not focused, it will affect the sibling ul (~ meaning sibling)
+  A sibling is made if the parent element has 2 or more children, and the children are siblings to one another
+  ul and #hamburger-menu-icon are both children to the nav element, therefore they are both affected and are both siblings.
   */
-    margin-top: 250px;
-  }
   #hamburger-menu-icon:not(:focus) ~ ul {
     visibility: hidden;
   }
+
+  /*
+  Changes color when the icon is focused
+  */
   #hamburger-menu-icon:focus {
     background-color: #323242;
   }
   #main-heading {
+    /*
+    adds shadow, since the nav is gone and the main-heading didn't need a shadow
+    */
     box-shadow: 5px 5px 8px rgb(28, 28, 37);
-    border-bottom: 2px solid #f9f9f9;
   }
 }
+/*
+Makes the hamburger menu not display on larger screen sizes
+*/
 @media (min-width: 600px) {
   #hamburger-menu-icon {
     display: none;
   }
 }
+
 #hamburger-menu-icon {
   /*
-  sets width of logo
+  Sets position to absolute to float over nav elements, similar to the rose logo
   */
-  width: 80px;
-  background-color: rgb(28, 28, 37);
   position: absolute;
+  /*
+  Keeps the menu to the top and to the right and float right stopped working when position absolute was introduced
+  */
+  top: 0;
+  right: 0;
+  /*
+  sets width of icon
+  */
+  width: 60px;
+  /*
+  Adds background color
+  */
+  background-color: rgb(28, 28, 37);
+
+  /*
+  Rounds border only on the bottom 2
+  */
   border-radius: 0px 0px 10px 10px;
 }
 
