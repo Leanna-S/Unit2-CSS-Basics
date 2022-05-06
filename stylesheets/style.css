@@ -31,10 +31,6 @@ have a lot of writing in the descriptions
   sets font family, serif more professional and it think it fits the tone  of the website well
   */
   font-family: Georgia, "Times New Roman", Times, serif;
-  /*
-  keeps everything in its appropriate box, some elements could stretch farther then they wer supposed to
-  */
-  box-sizing: border-box;
 }
 
 body {
@@ -93,7 +89,8 @@ Note: this will be used on every webpage exactly once
   border-bottom: 2px solid #f9f9f9;
 }
 #main-heading h1 {
-  padding: 0 150px 0 150px;
+  margin-right: 110px;
+  margin-left: 110px;
   /*
   sets font size and bolds the text
   */
@@ -114,10 +111,10 @@ Note: this will be used on every webpage exactly once
   */
   position: absolute;
   /*
-  sets padding and margin
+  sets margin, removes border and shadow that are applied in the img section
   */
-  padding: 5px;
-  margin: 12px 12px;
+
+  margin: 12px;
   border-radius: 0;
   box-shadow: none;
 }
@@ -267,6 +264,10 @@ img {
   */
   box-shadow: 2px 2px 5px rgb(28, 28, 37);
   border-radius: 10px;
+  /*
+  keeps everything in its proper borders, without it, it stretches
+  */
+  box-sizing: border-box;
 }
 footer {
   /*
@@ -406,7 +407,7 @@ Adds resizing at smaller sizes, so menu doesn't get mega squished
     /*
   margin is large so there is room for the menu at the top
   */
-    margin-top: 100px;
+    padding-top: 60px;
   }
   /*
 turns on align-side when screen size is big enough for it to look good
@@ -430,7 +431,7 @@ turns on align-side when screen size is big enough for it to look good
     /*
   margin is large so there is room for the menu at the top
   */
-    margin-top: 150px;
+    padding-top: 120px;
   }
 }
 @media (max-width: 600px) {
@@ -440,7 +441,12 @@ turns on align-side when screen size is big enough for it to look good
   */
     width: 100%;
   }
-
+  main {
+    /*
+  margin is large so there is room for the menu at the top
+  */
+    padding-top: 120px;
+  }
   /*
   Okay, so what this code basically does is when you are NOT focused (read clicked) on the burger menu,
   the ul (nav) is not visible. Therefore when you are focused on the burger menu, the ul (nav) element appears once again
@@ -464,6 +470,20 @@ turns on align-side when screen size is big enough for it to look good
     adds shadow, since the nav is gone and the main-heading didn't need a shadow
     */
     box-shadow: 5px 5px 8px rgb(28, 28, 37);
+  }
+  #logo {
+    /*
+  allows the logo to be over the header
+  */
+    position: static;
+    /*
+  sets padding and margin
+  */
+    margin: auto;
+    padding: 0;
+
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 /*
