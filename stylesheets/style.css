@@ -1,4 +1,11 @@
 /*
+  Name: Leanna Szypowski
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: Pembina Trails Early College
+  Date Last Modified: 5/16/2022
+/*
+/*
 Color chosen: blue
 Why: Blue represents calmness, serenity, secure, and orderly.
 Blue is often seen as a sign of stability and reliability which
@@ -82,7 +89,7 @@ Note: this will be used on every webpage exactly once
   /*
   sets background color
   */
-  background-color: rgb(28, 28, 37);
+  background-color: #1c1c25;
   /*
   adds border on the bottom
   */
@@ -151,14 +158,22 @@ ul {
   /*
   Adds background color
   */
-  background-color: rgb(28, 28, 37);
+  background-color: #1c1c25;
 
   /*
   Rounds border only on the bottom 2
   */
   border-radius: 0px 0px 10px 10px;
 }
-
+/*
+Removes all underline on links because the links on the resume page did not like it otherwise
+*/
+a:link {
+  /*
+  removes all additional decoration on the text
+  */
+  text-decoration: none;
+}
 .nav-links {
   /*
   floats beside each element
@@ -176,11 +191,8 @@ ul {
   text-align: center;
 
   color: #f9f9f9;
-  background-color: rgb(28, 28, 37);
-  /*
-  removes all additional decoration on the text
-  */
-  text-decoration: none;
+  background-color: #1c1c25;
+
   /*
   sets font size
   */
@@ -192,7 +204,7 @@ ul {
   /*
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
-  box-shadow: 2px 2px 5px rgb(28, 28, 37);
+  box-shadow: 2px 2px 5px #1c1c25;
 }
 
 /*
@@ -233,13 +245,13 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   /*
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
-  box-shadow: 2px 2px 5px rgb(28, 28, 37);
+  box-shadow: 2px 2px 5px #1c1c25;
   border-radius: 10px;
 
   /*
   Sets background color
   */
-  background-color: rgb(28, 28, 37);
+  background-color: #1c1c25;
 }
 
 img {
@@ -262,7 +274,7 @@ img {
   /*
   Adds shadow and curve to border
   */
-  box-shadow: 2px 2px 5px rgb(28, 28, 37);
+  box-shadow: 2px 2px 5px #1c1c25;
   border-radius: 10px;
   /*
   keeps everything in its proper borders, without it, it stretches
@@ -279,7 +291,7 @@ footer {
   /*
   sets background color
   */
-  background-color: rgb(28, 28, 37);
+  background-color: #1c1c25;
 }
 
 footer p {
@@ -324,18 +336,43 @@ footer p {
   /*
   adds auto resizing
   */
-  width: 10%;
+  width: 50%;
   height: auto;
   /*
   sets margin
   */
-  margin-left: 30px;
+  margin: auto;
   /*
   no border, no shadow
   */
   border: none;
   box-shadow: none;
 }
+.file-download-text {
+  /*
+  removes indent
+  */
+  text-indent: 0;
+  /*
+  Centers text
+  */
+  text-align: center;
+  /*
+  Changes font size
+  */
+  font-size: 36px;
+  /*
+  sets color
+  */
+  color: #1c1c25;
+}
+/*
+Keeps sections at 50% width. This was needed in the resume page
+*/
+.side-items-2 {
+  flex-basis: 50%;
+}
+
 /*
 Note: this can be helpful to both separate sections and bring them together (see the home page biography and image)
 */
@@ -381,7 +418,7 @@ form {
   Adds shadow and round the borders
   */
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgb(28, 28, 37);
+  box-shadow: 2px 2px 5px #1c1c25;
 }
 
 /*
@@ -469,7 +506,7 @@ turns on align-side when screen size is big enough for it to look good
     /*
     adds shadow, since the nav is gone and the main-heading didn't need a shadow
     */
-    box-shadow: 5px 5px 8px rgb(28, 28, 37);
+    box-shadow: 5px 5px 8px #1c1c25;
   }
   #logo {
     /*
