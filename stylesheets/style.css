@@ -412,7 +412,7 @@ form {
   /*
   Sets padding to the form
   */
-  padding: 1%;
+  padding: 30px;
 
   /*
   Adds shadow and round the borders
@@ -457,7 +457,7 @@ turns on align-side when screen size is big enough for it to look good
     display: flex;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 600px) {
   .nav-links {
     /*
   Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
@@ -482,7 +482,7 @@ turns on align-side when screen size is big enough for it to look good
     /*
   margin is large so there is room for the menu at the top
   */
-    padding-top: 120px;
+    padding-top: 50px;
   }
   /*
   Okay, so what this code basically does is when you are NOT focused (read clicked) on the burger menu,
@@ -493,7 +493,7 @@ turns on align-side when screen size is big enough for it to look good
   ul and #hamburger-menu-icon are both children to the nav element, therefore they are both affected and are both siblings.
   */
   #hamburger-menu-icon:not(:focus) ~ ul {
-    visibility: hidden;
+    display: none;
   }
 
   /*

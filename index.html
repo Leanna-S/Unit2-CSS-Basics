@@ -70,6 +70,34 @@
       .contact-us-input[type="submit"]:focus {
         background-color: #323242;
         color: #c8edff;
+        padding: 15px;
+      }
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 64px;
+        color: #f9f9f9;
+        text-shadow: 3px 3px 5px #1c1c25;
+      }
+      .next {
+        right: 0;
+      }
+      .slideshow-image {
+        display: none;
+      }
+      .slideshow-number {
+        text-align: center;
+        text-indent: 0;
+        font-weight: bold;
       }
     </style>
     <title>Leanna Szypowski - Portfolio</title>
@@ -167,6 +195,46 @@
             alt="Picture of Leanna sitting and smiling at the camera, wearing a light grey sweater and legging with dirty blonde hair and blue glasses"
           />
         </section>
+      </section>
+
+      <section>
+        <header class="page-header">
+          <h2>Pictures</h2>
+        </header>
+        <div class="slideshow-container">
+          <div class="slideshow-image">
+            <img
+              src="images\20200120_164710_IMG_2492.JPG"
+              alt="Image of a mountains and rolling hills"
+            />
+            <p class="slideshow-number">1/4</p>
+          </div>
+          <div class="slideshow-image">
+            <img
+              src="images\20180512_101423_IMG_0705.JPG"
+              alt="image of a rose dyed all colors of the rainbow"
+            />
+            <p class="slideshow-number">2/4</p>
+          </div>
+          <div class="slideshow-image">
+            <img
+              src="images\20190112_224042_IMG_1842.JPG"
+              alt="image of a black lab sitting on a deck outside, with a smile"
+            />
+            <p class="slideshow-number">3/4</p>
+          </div>
+          <div class="slideshow-image">
+            <img
+              src="images\20210518_145346.jpg"
+              alt=" Image of leanna smiling at the camera, wearing blue glasses, a black leopard shirt, with dirty blond hair"
+            />
+            <p class="slideshow-number">4/4</p>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)" tabindex="0">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)" tabindex="0">&#10095;</a>
+        </div>
+        <script type="text/javascript" src="js\slideshow.js"></script>
       </section>
 
       <!-- contact us form -->
