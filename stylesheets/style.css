@@ -1,4 +1,12 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+super cool addon that automatically adds prefixes
+*/
+
+/*
   Name: Leanna Szypowski
   Course: Software Development 20S
   Teacher: Mr. Hardman
@@ -123,6 +131,7 @@ Note: this will be used on every webpage exactly once
 
   margin: 12px;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /*
@@ -200,10 +209,13 @@ a:link {
   /*
   adds transition affect to nav elements
   */
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   transition: 0.3s ease;
   /*
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
+  -webkit-box-shadow: 2px 2px 5px #1c1c25;
   box-shadow: 2px 2px 5px #1c1c25;
 }
 
@@ -245,6 +257,7 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   /*
   Box shadow is my new favourite border (2px by 2px with 5px of fading out)
   */
+  -webkit-box-shadow: 2px 2px 5px #1c1c25;
   box-shadow: 2px 2px 5px #1c1c25;
   border-radius: 10px;
 
@@ -274,11 +287,13 @@ img {
   /*
   Adds shadow and curve to border
   */
+  -webkit-box-shadow: 2px 2px 5px #1c1c25;
   box-shadow: 2px 2px 5px #1c1c25;
   border-radius: 10px;
   /*
   keeps everything in its proper borders, without it, it stretches
   */
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 footer {
@@ -315,6 +330,7 @@ footer p {
   no border, no shadow
   */
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -346,6 +362,7 @@ footer p {
   no border, no shadow
   */
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .file-download-text {
@@ -370,6 +387,7 @@ footer p {
 Keeps sections at 50% width. This was needed in the resume page
 */
 .side-items-2 {
+  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
 }
 
@@ -386,6 +404,7 @@ section {
   /*
   Adds a shadow and curves the border
   */
+  -webkit-box-shadow: 5px 5px 8px;
   box-shadow: 5px 5px 8px;
   border-radius: 10px;
 
@@ -418,6 +437,7 @@ form {
   Adds shadow and round the borders
   */
   border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px #1c1c25;
   box-shadow: 2px 2px 5px #1c1c25;
 }
 
@@ -454,6 +474,8 @@ turns on align-side when screen size is big enough for it to look good
     /*
     allows the items to float side by side by breaking the sections by either divs or sections
     */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -506,6 +528,7 @@ turns on align-side when screen size is big enough for it to look good
     /*
     adds shadow, since the nav is gone and the main-heading didn't need a shadow
     */
+    -webkit-box-shadow: 5px 5px 8px #1c1c25;
     box-shadow: 5px 5px 8px #1c1c25;
   }
   #logo {
@@ -520,6 +543,7 @@ turns on align-side when screen size is big enough for it to look good
     padding: 0;
 
     border-radius: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
 }

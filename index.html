@@ -34,10 +34,12 @@
         */
         border-radius: 10px;
         border-width: 1px;
+        -webkit-box-shadow: 2px 2px 5px #1c1c25;
         box-shadow: 2px 2px 5px #1c1c25;
         /*
         keeps everything in its proper borders, without it, it stretches
         */
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
       }
       /*
@@ -72,29 +74,41 @@
         color: #c8edff;
         padding: 15px;
       }
+      /*
+      Centers and aligns the container properly so the arrows and the image are on top of each other
+      */
       .slideshow-container {
         position: relative;
         margin: auto;
       }
 
+      /* the arrows on the slide show  */
       .prev,
       .next {
+        /* sets the cursor to be the pointer when hovering on the arrows  */
         cursor: pointer;
+        /* keeps the arrows on the image  */
         position: absolute;
+        /* sets the arrows to be vertically aligned in the middle */
         top: 50%;
+        /* Adds padding, bolds the arrows, changes the font size */
         padding: 20px;
         font-weight: bold;
         font-size: 64px;
+        /* Sets text color and adds a shadow to add contrast */
         color: #f9f9f9;
         text-shadow: 3px 3px 5px #1c1c25;
       }
       .next {
+        /* takes the 'next' arrow and mover it to the right side */
         right: 0;
       }
       .slideshow-image {
+        /* Hides images by default */
         display: none;
       }
       .slideshow-number {
+        /* Center aligns text, removes indent, and make the text bold */
         text-align: center;
         text-indent: 0;
         font-weight: bold;
