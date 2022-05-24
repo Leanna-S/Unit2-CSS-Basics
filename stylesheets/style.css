@@ -148,6 +148,7 @@ ul {
   removes all additional default additions off the list (color, underline, etc.)
   */
   list-style-type: none;
+  display: block;
 }
 
 #hamburger-menu-icon {
@@ -382,6 +383,11 @@ footer p {
   sets color
   */
   color: #1c1c25;
+  transition: transform 0.5s ease-in-out;
+}
+.file-download-text:hover,
+.file-download-text:focus {
+  transform: scale(1.1);
 }
 /*
 Keeps sections at 50% width. This was needed in the resume page
@@ -514,15 +520,19 @@ turns on align-side when screen size is big enough for it to look good
   A sibling is made if the parent element has 2 or more children, and the children are siblings to one another
   ul and #hamburger-menu-icon are both children to the nav element, therefore they are both affected and are both siblings.
   */
-  #hamburger-menu-icon:not(:focus) ~ ul {
-    display: none;
+  #hamburger-menu-icon:focus ~ ul,
+  ul:focus,
+  ul:hover {
+    display: block;
   }
-
-  /*
-  Changes color when the icon is focused
-  */
   #hamburger-menu-icon:focus {
-    background-color: #323242;
+    opacity: 0;
+  }
+  /*
+  hides nav by default
+  */
+  ul {
+    display: none;
   }
   #main-heading {
     /*
