@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 5/1/2022
+  Date Last Modified: 5/25/2022
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -23,44 +23,36 @@
         Centers the text and sets it in the middle of the image
         */
         top: 20%;
-        /*
-        Noted in Nav of style.css, z-index allows there to be a hierarchy of what
-        appears on top, the higher the number, the higher priority is is to be on the top
-        The text under the image is set to an index of 1, while the image is 2, setting
-        the image above the text, however when the image is hovered, the index of the image
-        is set to 0, and it loses opacity, allowing the text to appear above the image
-        */
-        z-index: 1;
 
         /*sets font size*/
         font-size: 20px;
+        opacity: 0;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
       }
       .overlay-image {
         /*
         Allows the text to be on the image, and is relative to where it normally would be
         */
         position: relative;
-        /*
-        sets z-index to 2 so the image is OVER the text
-        */
-        z-index: 2;
+
         /*
         Makes the transitions easier and smooth when hovering over the images
         */
         transition: 0.5s ease;
         -webkit-transition: 0.5s ease;
         -o-transition: 0.5s ease;
-        opacity: 1;
       }
 
-      .overlay-image:hover,
-      .overlay-image:focus {
+      .achievements-container:hover > .overlay-image,
+      .achievements-container:focus > .overlay-image {
         /* Sets the opacity when hovered, lowering it slowly in conjunction with the transition property above */
         opacity: 0.2;
-        /*
-        sets z-index to 0 so that the text is OVER the image
-        */
-        z-index: 0;
+      }
+      .overlay-image:hover ~ .overlay-text,
+      .overlay-image:focus ~ .overlay-text {
+        opacity: 1;
       }
       .achievements-container {
         /*

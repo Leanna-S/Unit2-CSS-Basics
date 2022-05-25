@@ -11,7 +11,7 @@ super cool addon that automatically adds prefixes
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 5/16/2022
+  Date Last Modified: 5/25/2022
 /*
 /*
 Color chosen: blue
@@ -349,46 +349,7 @@ footer p {
   */
   text-align: right;
 }
-.file-download-icon {
-  /*
-  adds auto resizing
-  */
-  width: 50%;
-  height: auto;
-  /*
-  sets margin
-  */
-  margin: auto;
-  /*
-  no border, no shadow
-  */
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.file-download-text {
-  /*
-  removes indent
-  */
-  text-indent: 0;
-  /*
-  Centers text
-  */
-  text-align: center;
-  /*
-  Changes font size
-  */
-  font-size: 36px;
-  /*
-  sets color
-  */
-  color: #1c1c25;
-  transition: transform 0.5s ease-in-out;
-}
-.file-download-text:hover,
-.file-download-text:focus {
-  transform: scale(1.1);
-}
+
 /*
 Keeps sections at 50% width. This was needed in the resume page
 */

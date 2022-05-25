@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 5/16/2022
+  Date Last Modified: 5/25/2022
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
+    <style>
+      .file-download-icon {
+        /*
+        adds auto resizing
+        */
+        width: 50%;
+        height: auto;
+        /*
+        sets margin
+        */
+        margin: auto;
+        /*
+        no border, no shadow
+        */
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      .file-download-text {
+        /*
+        removes indent
+        */
+        text-indent: 0;
+        /*
+        Centers text
+        */
+        text-align: center;
+        /*
+        Changes font size
+        */
+        font-size: 36px;
+        /*
+        sets color
+      */
+        color: #1c1c25;
+      }
+      .file-download-container {
+        transition: transform 0.5s ease-in-out;
+      }
+      .file-download-container:hover {
+        transform: scale(1.1);
+      }
+    </style>
     <title>Resume</title>
   </head>
   <body>
@@ -82,31 +125,35 @@
         </header>
         <div class="align-side">
           <section class="side-items-2">
-            <a
-              href="images\resume.pdf"
-              download
-              title="Click to download Leanna's resume"
-            >
-              <img
-                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
-                alt="A logo of a file surrounded by a circle"
-                class="file-download-icon"
-              />
-              <p class="file-download-text">Click to download my resume</p>
-            </a>
+            <div class="file-download-container">
+              <a
+                href="images\resume.pdf"
+                download
+                title="Click to download Leanna's resume"
+              >
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="file-download-icon"
+                />
+                <p class="file-download-text">Click to download my resume</p>
+              </a>
+            </div>
           </section>
           <section class="side-items-2">
-            <a
-              href="https://github.com/Leanna-S"
-              title="Click to go to Leanna's Github"
-            >
-              <img
-                src="images\25231.png"
-                alt="Github logo"
-                class="file-download-icon"
-              />
-              <p class="file-download-text">Click to go to Leanna's Github</p>
-            </a>
+            <div class="file-download-container">
+              <a
+                href="https://github.com/Leanna-S"
+                title="Click to go to Leanna's Github"
+              >
+                <img
+                  src="images\25231.png"
+                  alt="Github logo"
+                  class="file-download-icon"
+                />
+                <p class="file-download-text">Click to go to Leanna's Github</p>
+              </a>
+            </div>
           </section>
         </div>
       </section>
