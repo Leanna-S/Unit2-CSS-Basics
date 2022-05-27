@@ -20,13 +20,19 @@
         position: absolute;
 
         /*
-        Centers the text and sets it in the middle of the image
+        adjusts top
         */
         top: 20%;
 
-        /*sets font size*/
+        /*
+        sets font size
+        */
         font-size: 20px;
+        /* sets opacity to 0 */
         opacity: 0;
+        /*
+        adds a fade out transition
+        */
         transition: 0.5s ease;
         -webkit-transition: 0.5s ease;
         -o-transition: 0.5s ease;
@@ -47,11 +53,15 @@
 
       .achievements-container:hover > .overlay-image,
       .achievements-container:focus > .overlay-image {
-        /* Sets the opacity when hovered, lowering it slowly in conjunction with the transition property above */
+        /*
+        Sets the opacity when hovered, lowering it slowly in conjunction with the transition property above 
+        */
         opacity: 0.2;
       }
       .overlay-image:hover ~ .overlay-text,
-      .overlay-image:focus ~ .overlay-text {
+      .overlay-image:focus ~ .overlay-text,
+      .overlay-text:hover,
+      .overlay-text:focus {
         opacity: 1;
       }
       .achievements-container {

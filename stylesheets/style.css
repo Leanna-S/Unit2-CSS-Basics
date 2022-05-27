@@ -231,6 +231,12 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   color: #c8edff;
 
   background-color: #323242;
+  /*
+  sets outline color, outline style, and outline offset
+  */
+  outline-color: #c8edff;
+  outline-style: solid;
+  outline-offset: -5px;
 }
 .nav-selected a {
   /*

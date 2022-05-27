@@ -30,10 +30,12 @@
         font-size: 18px;
 
         /*
-        rounds border and adds a border and shadow
+        rounds border and adds an outline and shadow
         */
         border-radius: 10px;
-        border-width: 1px;
+        outline-width: 1px;
+        outline-color: #1c1c25;
+        border: none;
         -webkit-box-shadow: 2px 2px 5px #1c1c25;
         box-shadow: 2px 2px 5px #1c1c25;
         /*
@@ -45,21 +47,20 @@
       /*
       Hover = mouse over button, focus = selected or clicked on, gives interactive feel
       */
-      .contact-us-input:hover {
-        /*
-        Thins border, sets type and color, and round the border
-        */
-        border-width: 2px;
-        border-style: solid;
-        border-color: #1c1c25;
-        border-radius: 10px;
-      }
+      .contact-us-input:hover,
       .contact-us-input:focus {
-        border-style: solid;
-        border-color: #1c1c25;
+        /*
+        Thickens outline, sets type and color, and rounds the border
+        */
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: #1c1c25;
         border-radius: 10px;
       }
-      /* used for just the submit button, as it doesn't seem to affect the submit button if it isn't treated separately */
+
+      /*
+      used for just the submit button, as it doesn't seem to affect the submit button if it isn't treated separately
+      */
       .contact-us-input[type="submit"] {
         font-weight: bold;
         font-size: 16px;
@@ -82,33 +83,51 @@
         margin: auto;
       }
 
-      /* the arrows on the slide show  */
+      /*
+      the arrows on the slide show
+      */
       .prev,
       .next {
-        /* sets the cursor to be the pointer when hovering on the arrows  */
+        /*
+        sets the cursor to be the pointer when hovering on the arrows
+        */
         cursor: pointer;
-        /* keeps the arrows on the image  */
+        /*
+        keeps the arrows on the image
+        */
         position: absolute;
-        /* sets the arrows to be vertically aligned in the middle */
+        /*
+        sets the arrows to be vertically aligned in the middle
+        */
         top: 50%;
-        /* Adds padding, bolds the arrows, changes the font size */
+        /*
+        Adds padding, bolds the arrows, changes the font size
+        */
         padding: 20px;
         font-weight: bold;
         font-size: 64px;
-        /* Sets text color and adds a shadow to add contrast */
+        /*
+        Sets text color and adds a shadow to add contrast
+        */
         color: #f9f9f9;
         text-shadow: 3px 3px 5px #1c1c25;
       }
       .next {
-        /* takes the 'next' arrow and mover it to the right side */
+        /*
+        takes the 'next' arrow and mover it to the right side
+        */
         right: 0;
       }
       .slideshow-image {
-        /* Hides images by default */
+        /*
+        Hides images by default
+        */
         display: none;
       }
       .slideshow-number {
-        /* Center aligns text, removes indent, and make the text bold */
+        /*
+        Center aligns text, removes indent, and make the text bold
+        */
         text-align: center;
         text-indent: 0;
         font-weight: bold;
