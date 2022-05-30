@@ -12,6 +12,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets\style.css" />
+    <style>
+      .download-file-small {
+        width: 50px;
+        box-shadow: none;
+        float: left;
+      }
+      .download-file-small-text {
+        text-decoration: none;
+        color: #1c1c25;
+        padding: 10px;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="images\Picture1.png" />
     <title>Work Portfolio</title>
   </head>
   <body>
@@ -79,6 +92,101 @@
         <header class="page-header">
           <h2>Projects I've Made</h2>
         </header>
+        <div class="align-side">
+          <section class="side-items-2">
+            <!-- container around slideshow -->
+            <div class="slideshow-container">
+              <!-- slideshow images in own divs, with a p class for  the cycled numbers -->
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0767.png"
+                  alt="Drawing of pale girl with blue and purple hair looking straight"
+                />
+                <p class="slideshow-number">1/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0768.png"
+                  alt="Woman with blue dress floating while purple dragon swirls around"
+                />
+                <p class="slideshow-number">2/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0769.png"
+                  alt="image of darker skinned woman with brown wavy hair looking upwards while lit by a blue light"
+                />
+                <p class="slideshow-number">3/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0770.png"
+                  alt="Portrait of a woman with long purple hair tilting her head towards the camera"
+                />
+                <p class="slideshow-number">4/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0798.png"
+                  alt="Dark skinned woman with eyes closed framed by white lilies"
+                />
+                <p class="slideshow-number">5/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0803.png"
+                  alt="Assassin woman holding staff with black hooded robs and a purple cloak"
+                />
+                <p class="slideshow-number">6/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0804.png"
+                  alt="winged elf with white hair and a blue and purple dress  sitting and stone pillars with vine twining up her body"
+                />
+                <p class="slideshow-number">7/8</p>
+              </div>
+              <div class="slideshow-image">
+                <img
+                  src="images\IMG_0805.png"
+                  alt="woman looking over her shoulder with a wde brimmed hat and a red dress"
+                />
+                <p class="slideshow-number">8/8</p>
+              </div>
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)" tabindex="0">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)" tabindex="0">&#10095;</a>
+              <script type="text/javascript" src="js\slideshow.js"></script>
+            </div>
+          </section>
+
+          <section class="side-items-2">
+            <a href="images\resume.pdf" download title="Click to download">
+              <img
+                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                alt="A logo of a file surrounded by a circle"
+                class="download-file-small"
+              />
+              <p class="download-file-small-text">Click to download {insert}</p>
+            </a>
+            <a href="images\resume.pdf" download title="Click to download">
+              <img
+                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                alt="A logo of a file surrounded by a circle"
+                class="download-file-small"
+              />
+              <p class="download-file-small-text">Click to download {insert}</p>
+            </a>
+            <a href="images\resume.pdf" download title="Click to download">
+              <img
+                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                alt="A logo of a file surrounded by a circle"
+                class="download-file-small"
+              />
+              <p class="download-file-small-text">Click to download {insert}</p>
+            </a>
+          </section>
+        </div>
       </section>
     </main>
 

@@ -232,11 +232,19 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
 
   background-color: #323242;
   /*
-  sets outline color, outline style, and outline offset
+  sets outline color, outline style, outline offset, and outline width
+  works similar to border but doesn't take up actual space
   */
   outline-color: #c8edff;
   outline-style: solid;
+  /*
+  moves it inwards
+  */
   outline-offset: -5px;
+  /*
+  3px width
+  */
+  outline-width: 3px;
 }
 .nav-selected a {
   /*
@@ -421,6 +429,63 @@ Used to set text as italics or bold respectively
   font-style: italic;
 }
 .bold {
+  font-weight: bold;
+}
+/*
+      Centers and aligns the container properly so the arrows and the image are on top of each other
+      */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/*
+      the arrows on the slide show
+      */
+.prev,
+.next {
+  /*
+        sets the cursor to be the pointer when hovering on the arrows
+        */
+  cursor: pointer;
+  /*
+        keeps the arrows on the image
+        */
+  position: absolute;
+  /*
+        sets the arrows to be vertically aligned in the middle
+        */
+  top: 50%;
+  /*
+        Adds padding, bolds the arrows, changes the font size
+        */
+  padding: 20px;
+  font-weight: bold;
+  font-size: 64px;
+  /*
+        Sets text color and adds a shadow to add contrast
+        */
+  color: #f9f9f9;
+  text-shadow: 3px 3px 5px #1c1c25;
+}
+.next {
+  /*
+        takes the 'next' arrow and mover it to the right side
+        */
+  right: 0;
+}
+.slideshow-image {
+  /*
+        Hides images by default
+        */
+  display: none;
+}
+.slideshow-number {
+  /*
+        Center aligns text, removes indent, and make the text bold
+        */
+  text-align: center;
+  text-indent: 0;
   font-weight: bold;
 }
 /*

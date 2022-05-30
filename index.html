@@ -62,75 +62,27 @@
       used for just the submit button, as it doesn't seem to affect the submit button if it isn't treated separately
       */
       .contact-us-input[type="submit"] {
+        /*
+        bolds, sets font size and padding
+        */
         font-weight: bold;
         font-size: 16px;
         padding: 15px;
 
+        /*
+        sets background and text color
+        */
         background-color: #1c1c25;
         color: #f9f9f9;
       }
       .contact-us-input[type="submit"]:hover,
       .contact-us-input[type="submit"]:focus {
+        /*
+        sets text and background color, and adds paddings
+        */
         background-color: #323242;
         color: #c8edff;
         padding: 15px;
-      }
-      /*
-      Centers and aligns the container properly so the arrows and the image are on top of each other
-      */
-      .slideshow-container {
-        position: relative;
-        margin: auto;
-      }
-
-      /*
-      the arrows on the slide show
-      */
-      .prev,
-      .next {
-        /*
-        sets the cursor to be the pointer when hovering on the arrows
-        */
-        cursor: pointer;
-        /*
-        keeps the arrows on the image
-        */
-        position: absolute;
-        /*
-        sets the arrows to be vertically aligned in the middle
-        */
-        top: 50%;
-        /*
-        Adds padding, bolds the arrows, changes the font size
-        */
-        padding: 20px;
-        font-weight: bold;
-        font-size: 64px;
-        /*
-        Sets text color and adds a shadow to add contrast
-        */
-        color: #f9f9f9;
-        text-shadow: 3px 3px 5px #1c1c25;
-      }
-      .next {
-        /*
-        takes the 'next' arrow and mover it to the right side
-        */
-        right: 0;
-      }
-      .slideshow-image {
-        /*
-        Hides images by default
-        */
-        display: none;
-      }
-      .slideshow-number {
-        /*
-        Center aligns text, removes indent, and make the text bold
-        */
-        text-align: center;
-        text-indent: 0;
-        font-weight: bold;
       }
     </style>
     <title>Leanna Szypowski - Portfolio</title>
@@ -234,7 +186,9 @@
         <header class="page-header">
           <h2>Pictures</h2>
         </header>
+        <!-- container around slideshow -->
         <div class="slideshow-container">
+          <!-- slideshow images in own divs, with a p class for  the cycled numbers -->
           <div class="slideshow-image">
             <img
               src="images\20200120_164710_IMG_2492.JPG"
