@@ -432,41 +432,50 @@ Used to set text as italics or bold respectively
   font-weight: bold;
 }
 /*
-      Centers and aligns the container properly so the arrows and the image are on top of each other
-      */
+Centers and aligns the container properly so the arrows and the image are on top of each other
+*/
 .slideshow-container {
   position: relative;
   margin: auto;
 }
 
 /*
-      the arrows on the slide show
-      */
+the arrows on the slide show
+*/
 .prev,
 .next {
   /*
-        sets the cursor to be the pointer when hovering on the arrows
-        */
+  sets the cursor to be the pointer when hovering on the arrows
+  */
   cursor: pointer;
   /*
-        keeps the arrows on the image
-        */
+  keeps the arrows on the image
+  */
   position: absolute;
   /*
-        sets the arrows to be vertically aligned in the middle
-        */
+  sets the arrows to be vertically aligned in the middle
+  */
   top: 50%;
+  transform: translateY(-50%);
   /*
-        Adds padding, bolds the arrows, changes the font size
-        */
+  Adds padding, bolds the arrows, changes the font size
+  */
   padding: 20px;
   font-weight: bold;
   font-size: 64px;
   /*
-        Sets text color and adds a shadow to add contrast
-        */
+  Sets text color and adds a shadow to add contrast
+  */
   color: #f9f9f9;
   text-shadow: 3px 3px 5px #1c1c25;
+
+  transition: transform 0.5s ease-in-out;
+}
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus {
+  transform: scale(1.2) translateY(-50%);
 }
 .next {
   /*

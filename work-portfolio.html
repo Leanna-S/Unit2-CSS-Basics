@@ -14,14 +14,41 @@
     <link rel="stylesheet" href="stylesheets\style.css" />
     <style>
       .download-file-small {
-        width: 50px;
+        width: auto;
+        height: 50px;
         box-shadow: none;
-        float: left;
+        /* float: left; */
       }
-      .download-file-small-text {
+      .file-download-container a {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: #1c1c25;
-        padding: 10px;
+        margin: 10px;
+        margin-bottom: 20px;
+
+        padding: 15px;
+
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: #1c1c25 2px 2px 5px;
+      }
+
+      .file-download-container a:hover,
+      .file-download-container a:focus {
+        transform: scale(1.05);
+        outline-color: #1c1c25;
+        outline-style: solid;
+        outline-width: 2px;
+      }
+
+      .file-download-container p {
+        margin: 0;
+        text-indent: 0;
+        margin-left: 10px;
+      }
+      .dropdown-button {
+        cursor: pointer;
       }
     </style>
     <link rel="icon" type="image/x-icon" href="images\Picture1.png" />
@@ -94,6 +121,9 @@
         </header>
         <div class="align-side">
           <section class="side-items-2">
+            <header class="page-header">
+              <h3>Art</h3>
+            </header>
             <!-- container around slideshow -->
             <div class="slideshow-container">
               <!-- slideshow images in own divs, with a p class for  the cycled numbers -->
@@ -161,30 +191,97 @@
           </section>
 
           <section class="side-items-2">
-            <a href="images\resume.pdf" download title="Click to download">
-              <img
-                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
-                alt="A logo of a file surrounded by a circle"
-                class="download-file-small"
-              />
-              <p class="download-file-small-text">Click to download {insert}</p>
-            </a>
-            <a href="images\resume.pdf" download title="Click to download">
-              <img
-                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
-                alt="A logo of a file surrounded by a circle"
-                class="download-file-small"
-              />
-              <p class="download-file-small-text">Click to download {insert}</p>
-            </a>
-            <a href="images\resume.pdf" download title="Click to download">
-              <img
-                src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
-                alt="A logo of a file surrounded by a circle"
-                class="download-file-small"
-              />
-              <p class="download-file-small-text">Click to download {insert}</p>
-            </a>
+            <header class="page-header">
+              <h3>Download My Projects</h3>
+            </header>
+            <div class="file-download-container">
+              <a
+                href="images\short story ELA 600 words (or less).pdf"
+                download
+                title="Click to download"
+              >
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>Click to download my short story!</p>
+              </a>
+              <p class="dropdown-button">Click ME</p>
+              <p class="dropdown-info">
+                Testing, testing 1 2 3 blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah
+              </p>
+            </div>
+            <div class="file-download-container">
+              <a
+                href="images\images\ux ui final.pdf"
+                download
+                title="Click to download"
+              >
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>Click to download my UX/UI final presentation</p>
+              </a>
+            </div>
+
+            <div class="file-download-container">
+              <a href="images\Python!.pptx" download title="Click to download">
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>Click to download my Python presentation</p>
+              </a>
+            </div>
+
+            <div class="file-download-container">
+              <a href="images\bermuda.pdf" download title="Click to download">
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>Click to download my debunking the Bermuda Triangle essay</p>
+              </a>
+            </div>
+
+            <div class="file-download-container">
+              <a
+                href="images\research final.zip"
+                download
+                title="Click to download"
+              >
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>
+                  Click to download my Fort Whyte and Whyte Ridge script and
+                  presentation
+                </p>
+              </a>
+            </div>
+
+            <div class="file-download-container">
+              <a
+                href="images\101 dal ESSAY.pdf"
+                download
+                title="Click to download"
+              >
+                <img
+                  src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
+                  alt="A logo of a file surrounded by a circle"
+                  class="download-file-small"
+                />
+                <p>Click to download my 101 Dalmations essay</p>
+              </a>
+            </div>
           </section>
         </div>
       </section>
