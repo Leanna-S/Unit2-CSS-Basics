@@ -19,6 +19,12 @@
         box-shadow: none;
         /* float: left; */
       }
+      .file-download-container {
+        box-shadow: #1c1c25 2px 2px 5px;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px;
+      }
       .file-download-container a {
         display: flex;
         align-items: center;
@@ -47,8 +53,19 @@
         text-indent: 0;
         margin-left: 10px;
       }
+      .dropdown-info {
+        display: none;
+      }
       .dropdown-button {
         cursor: pointer;
+
+        font-size: 24px;
+      }
+
+      .dropdown-button:focus ~ .dropdown-info,
+      .dropdown-info:focus,
+      .dropdown-info:hover {
+        display: block;
       }
     </style>
     <link rel="icon" type="image/x-icon" href="images\Picture1.png" />
@@ -207,10 +224,14 @@
                 />
                 <p>Click to download my short story!</p>
               </a>
-              <p class="dropdown-button">Click ME</p>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
               <p class="dropdown-info">
-                Testing, testing 1 2 3 blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah
+                This was a story written in grade 9. It had to be written in
+                under 600 words, which I struggled with. I think it turned out
+                well and I thing it shows my ability to write in a more creative
+                setting.
               </p>
             </div>
             <div class="file-download-container">
@@ -226,6 +247,16 @@
                 />
                 <p>Click to download my UX/UI final presentation</p>
               </a>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
+              <p class="dropdown-info">
+                This was made with the help of a classmate and 3 mentors from
+                the industry. It show our teamwork skills and our project
+                management skills and shows our learning process quite well.
+                This project on redesigning a website can directly correlate to
+                industry.
+              </p>
             </div>
 
             <div class="file-download-container">
@@ -237,6 +268,14 @@
                 />
                 <p>Click to download my Python presentation</p>
               </a>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
+              <p class="dropdown-info">
+                This was made in grade 9 and was a presentation of how I learnt
+                the basics of python in my free time. I love how the PowerPoint
+                turned out and shows how i can learn new things with ease.
+              </p>
             </div>
 
             <div class="file-download-container">
@@ -248,6 +287,13 @@
                 />
                 <p>Click to download my debunking the Bermuda Triangle essay</p>
               </a>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
+              <p class="dropdown-info">
+                This was written in grade 10 and is an essay debunking the
+                Bermuda Triangle Theory.
+              </p>
             </div>
 
             <div class="file-download-container">
@@ -266,6 +312,17 @@
                   presentation
                 </p>
               </a>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
+              <p class="dropdown-info">
+                Made in my grade 10 year, this zip file contains both the script
+                and presentation for the research project I did on Fort Whyte
+                and Whyte Ridge. It discusses some fun stories about the areas
+                history, where the names come from, and why these areas are so
+                important. This project shows great research skills and shows of
+                presentation skills as well.
+              </p>
             </div>
 
             <div class="file-download-container">
@@ -281,6 +338,14 @@
                 />
                 <p>Click to download my 101 Dalmations essay</p>
               </a>
+              <p class="dropdown-button" tabindex="0">
+                Read more <span class="bold">&#10095;</span>
+              </p>
+              <p class="dropdown-info">
+                Written in my grade 10 year, this essay discusses the hidden
+                symbolism within 101 Dalmations and why it make the film so much
+                deeper than it originally appears.
+              </p>
             </div>
           </section>
         </div>

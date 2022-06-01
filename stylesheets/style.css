@@ -59,8 +59,25 @@ body {
   sets background color
   */
   background-color: #bfbfcf;
+
+  /*
+  fades in the content in 1.5s
+  */
+  animation: fadeinscroll 1s ease-in-out forwards;
 }
 
+/*
+adds key frames so it fades from 0 opacity to 1 and goes from 500 px downward to where it should be
+*/
+@keyframes fadeinscroll {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*
 Navigation elements
 */
@@ -246,6 +263,7 @@ Hover = mouse over button, focus = selected or clicked on, gives interactive fee
   */
   outline-width: 3px;
 }
+
 .nav-selected a {
   /*
   Underlines text of selected menu, and sets color to a more prominent blue
@@ -479,20 +497,20 @@ the arrows on the slide show
 }
 .next {
   /*
-        takes the 'next' arrow and mover it to the right side
-        */
+  takes the 'next' arrow and mover it to the right side
+  */
   right: 0;
 }
 .slideshow-image {
   /*
-        Hides images by default
-        */
+  Hides images by default
+  */
   display: none;
 }
 .slideshow-number {
   /*
-        Center aligns text, removes indent, and make the text bold
-        */
+  Center aligns text, removes indent, and make the text bold
+  */
   text-align: center;
   text-indent: 0;
   font-weight: bold;
