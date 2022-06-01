@@ -47,7 +47,6 @@ have a lot of writing in the descriptions
   */
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 body {
   /*
   removes margin and padding
@@ -63,21 +62,25 @@ body {
   /*
   fades in the content in 1.5s
   */
-  animation: fadeinscroll 1s ease-in-out forwards;
+  animation: reveal 2s ease-in-out forwards;
 }
 
 /*
 adds key frames so it fades from 0 opacity to 1 and goes from 500 px downward to where it should be
 */
-@keyframes fadeinscroll {
-  from {
-    opacity: 0;
-    transform: translateY(-500px);
+@keyframes reveal {
+  0% {
+    visibility: hidden;
+    background: linear-gradient(180deg, #bfbfcf, #000000);
   }
-  to {
-    opacity: 1;
+  80% {
+  }
+  100% {
+    visibility: visible;
+    background-color: #bfbfcf;
   }
 }
+
 /*
 Navigation elements
 */
@@ -151,6 +154,7 @@ Note: this will be used on every webpage exactly once
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 /*
 Navigation styling
 */
@@ -165,6 +169,10 @@ ul {
   removes all additional default additions off the list (color, underline, etc.)
   */
   list-style-type: none;
+  /*
+  sets display to block
+  used during hamburger menu
+  */
   display: block;
 }
 

@@ -14,54 +14,120 @@
     <link rel="stylesheet" href="stylesheets\style.css" />
     <style>
       .download-file-small {
+        /*
+        auto sizes image, with 50px height
+        */
         width: auto;
         height: 50px;
+        /*
+        removes default font shadow on images
+        */
         box-shadow: none;
         /* float: left; */
       }
       .file-download-container {
-        box-shadow: #1c1c25 2px 2px 5px;
-        border-radius: 10px;
-        padding: 15px;
+        /*
+        adds padding and margin
+        */
+        padding: 10px;
         margin: 10px;
+
+        /*
+        adds box shadow
+        */
+        box-shadow: #1c1c25 2px 2px 5px;
+        /*
+        rounds border
+        */
+        border-radius: 10px;
       }
       .file-download-container a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: #1c1c25;
-        margin: 10px;
-        margin-bottom: 20px;
-
+        /*
+        adds padding and margin
+        */
         padding: 15px;
+        margin: 10px;
+        /*
+        lines up the file and the text side by side using display flex 
+        */
+        display: flex;
+        /*
+        centers items
+        */
+        align-items: center;
+        /*
+        removes link decoration
+        */
+        text-decoration: none;
+        /*
+        sets color
+        */
+        color: #1c1c25;
 
+        /*
+        adds box shadow and rounds border
+        */
         border-radius: 10px;
-        transition: transform 0.5s ease-in-out;
         box-shadow: #1c1c25 2px 2px 5px;
-      }
 
+        /*
+        transition that scales up slowly, grabbing from the focus and hover variant
+        */
+        transition: transform 0.5s ease-in-out;
+      }
+      /*
+      on the download link focus and hover
+      */
       .file-download-container a:hover,
       .file-download-container a:focus {
+        /*
+        scales it up 5%, uses transition from the none focused and hovered version
+        */
         transform: scale(1.05);
+        /*
+        adds an outline, with solid border and a width
+        */
         outline-color: #1c1c25;
         outline-style: solid;
         outline-width: 2px;
       }
 
       .file-download-container p {
+        /*
+      removes margin and default indent on paragraph
+      */
         margin: 0;
         text-indent: 0;
+        /*
+      moves text 10px away from the file image
+      */
         margin-left: 10px;
       }
+      /*
+      hides dropdown info by default
+      */
       .dropdown-info {
         display: none;
       }
+      /*
+      sets cursor to pointer, ups font size
+      */
       .dropdown-button {
         cursor: pointer;
 
         font-size: 24px;
       }
-
+      /*
+      adds underline on hover and focus
+      */
+      .dropdown-button:focus,
+      .dropdown-button:hover {
+        text-decoration: underline;
+      }
+      /*
+      similar to the burger menu. on click of the button, the information is changed from display none to display block
+      uses sibling elements, and has it on the info hover so it doesn't immediately disappear
+      */
       .dropdown-button:focus ~ .dropdown-info,
       .dropdown-info:focus,
       .dropdown-info:hover {
@@ -136,7 +202,9 @@
         <header class="page-header">
           <h2>Projects I've Made</h2>
         </header>
+        <!-- aligns the "side-items-2" -->
         <div class="align-side">
+          <!-- splits the flex area 50/50 -->
           <section class="side-items-2">
             <header class="page-header">
               <h3>Art</h3>
@@ -203,6 +271,7 @@
               <!-- Next and previous buttons -->
               <a class="prev" onclick="plusSlides(-1)" tabindex="0">&#10094;</a>
               <a class="next" onclick="plusSlides(1)" tabindex="0">&#10095;</a>
+              <!-- script to change slides -->
               <script type="text/javascript" src="js\slideshow.js"></script>
             </div>
           </section>
@@ -211,12 +280,14 @@
             <header class="page-header">
               <h3>Download My Projects</h3>
             </header>
+            <!-- div for the file download -->
             <div class="file-download-container">
               <a
                 href="images\short story ELA 600 words (or less).pdf"
                 download
                 title="Click to download"
               >
+                <!-- smaller version of the one on the resume page -->
                 <img
                   src="images\145-1455073_png-file-svg-aesthetic-file-icon-png-transparent.png"
                   alt="A logo of a file surrounded by a circle"
@@ -224,9 +295,12 @@
                 />
                 <p>Click to download my short story!</p>
               </a>
+              <!-- button you can tab to -->
+              <!-- span bolds the arrow -->
               <p class="dropdown-button" tabindex="0">
                 Read more <span class="bold">&#10095;</span>
               </p>
+              <!-- information that is hidden -->
               <p class="dropdown-info">
                 This was a story written in grade 9. It had to be written in
                 under 600 words, which I struggled with. I think it turned out
@@ -292,7 +366,9 @@
               </p>
               <p class="dropdown-info">
                 This was written in grade 10 and is an essay debunking the
-                Bermuda Triangle Theory.
+                Bermuda Triangle Theory. This shows the ability to filter
+                through information to see what is real and what is simply a
+                myth.
               </p>
             </div>
 
