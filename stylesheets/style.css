@@ -70,7 +70,7 @@ adds key frames
     */
     height: 100%;
     /*
-    top set to 0 to move the reveal from top-bottom instead of bottom to top
+    top set to 0 to move the reveal so it comes from both sides
     */
     top: 0;
   }
@@ -80,16 +80,16 @@ adds key frames
     */
     height: 0%;
     /*
-    top set to 200%, again so it scrolls top-bottom
+    top set to 50, again so it disappears from the top and bottom
     */
-    top: 100%;
+    top: 50%;
   }
 }
 .cover {
   /*
   runs reveal animation in 2s with 0.2s delay
   */
-  animation: reveal 1.5s ease-in-out 0.2s forwards;
+  animation: reveal 0.75s ease-in-out 0.2s forwards;
 
   /*
   sets position to absolute so it goes above all other content
@@ -559,19 +559,19 @@ Adds resizing at smaller sizes, so menu doesn't get mega squished
 @media (min-width: 900px) {
   .nav-links {
     /*
-  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
-  */
+    Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+    */
     width: 25%;
   }
   main {
     /*
-  margin is large so there is room for the menu at the top
-  */
+    margin is large so there is room for the menu at the top
+    */
     padding-top: 60px;
   }
   /*
-turns on align-side when screen size is big enough for it to look good
-*/
+  turns on align-side when screen size is big enough for it to look good
+  */
 
   .align-side {
     /*
@@ -585,28 +585,28 @@ turns on align-side when screen size is big enough for it to look good
 @media (max-width: 900px) and (min-width: 600px) {
   .nav-links {
     /*
-  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
-  */
+    Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+    */
     width: 50%;
   }
   main {
     /*
-  margin is large so there is room for the menu at the top
-  */
+    margin is large so there is room for the menu at the top
+    */
     padding-top: 120px;
   }
 }
 @media (max-width: 600px) {
   .nav-links {
     /*
-  Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
-  */
+    Each element takes up 25% of the screen (100/4 = 25) although this number would change with more pages
+    */
     width: 100%;
   }
   main {
     /*
-  margin is large so there is room for the menu at the top
-  */
+    margin is large so there is room for the menu at the top
+    */
     padding-top: 50px;
   }
   /*
@@ -640,12 +640,12 @@ turns on align-side when screen size is big enough for it to look good
   }
   #logo {
     /*
-  allows the logo to be over the header
-  */
+    allows the logo to be over the header
+    */
     position: static;
     /*
-  sets padding and margin
-  */
+    sets padding and margin
+    */
     margin: auto;
     padding: 0;
 
