@@ -11,7 +11,7 @@ super cool addon that automatically adds prefixes
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 5/25/2022
+  Date Last Modified: 6/2/2022
 /*
 /*
 Color chosen: blue
@@ -58,29 +58,59 @@ body {
   sets background color
   */
   background-color: #bfbfcf;
-
-  /*
-  fades in the content in 1.5s
-  */
-  animation: reveal 2s ease-in-out forwards;
 }
 
 /*
-adds key frames so it fades from 0 opacity to 1 and goes from 500 px downward to where it should be
+adds key frames
 */
 @keyframes reveal {
   0% {
-    visibility: hidden;
-    background: linear-gradient(180deg, #bfbfcf, #000000);
-  }
-  80% {
+    /*
+    sets the height to 200%
+    */
+    height: 100%;
+    /*
+    top set to 0 to move the reveal from top-bottom instead of bottom to top
+    */
+    top: 0;
   }
   100% {
-    visibility: visible;
-    background-color: #bfbfcf;
+    /*
+    now height set to 0 so it disappears
+    */
+    height: 0%;
+    /*
+    top set to 200%, again so it scrolls top-bottom
+    */
+    top: 100%;
   }
 }
+.cover {
+  /*
+  runs reveal animation in 2s with 0.2s delay
+  */
+  animation: reveal 1.5s ease-in-out 0.2s forwards;
 
+  /*
+  sets position to absolute so it goes above all other content
+  */
+  position: fixed;
+  /*
+  moves it above everything
+  */
+  z-index: 999;
+
+  /*
+  sets height and width to 100%
+  */
+  height: 100%;
+  width: 100%;
+
+  /*
+  sets background color
+  */
+  background-color: #bfbfcf;
+}
 /*
 Navigation elements
 */
